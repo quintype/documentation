@@ -2,6 +2,35 @@
 
 The customers of Quintype platform can use below APIs for subscriptions in Accesstype.
 
+## POST Preview subscription
+
+```shell
+curl -H "content-type: application/json" https://sketches.quintype.com/api/v1/subscription/preview -d '{
+    "member": {
+      "email": "example@gmail.com"
+    },
+    "subscription": {
+        "accesstype-plan-id": 7,
+        "coupon-code": "",
+        "metadata": {
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "house": "Old Airport Road, Murugeshpallya, Bangalore",
+          "street": "Old Airport Road, Murugeshpallya, Bangalore",
+          "landmark": "Karnataka",
+          "pincode": "560017",
+          "mobile": "8129612361"
+         }
+    }}
+'
+```
+It returns a preview for a Subscription, without creating a new subscription.
+For a successful subscription, it also return an `attempt_token`.
+
+An `attempt_token` is the identifier of a subscription attempt. It should be sent back with [register & subscribe](#post-register-and-subscribe-a-user) api or [subscribe without login](#post-subscribe-without-login) api to mark an attempt as success.
+
+We highly recommend use of this API before accepting payment form a user.
+
 ## POST Register And Subscribe a user
 
 ```shell
@@ -94,34 +123,6 @@ It create subscription for a already registered user.
 
 `attempt-token` can be fetched using [preview](#post-preview-subscription) api. This is an optional parameter but we advice you to use it for better tracking of transactions.
 
-## POST Preview subscription
-
-```shell
-curl -H "content-type: application/json" https://sketches.quintype.com/api/v1/subscription/preview -d '{
-    "member": {
-      "email": "example@gmail.com"
-    },
-    "subscription": {
-        "accesstype-plan-id": 7,
-        "coupon-code": "",
-        "metadata": {
-          "city": "Bangalore",
-          "state": "Karnataka",
-          "house": "Old Airport Road, Murugeshpallya, Bangalore",
-          "street": "Old Airport Road, Murugeshpallya, Bangalore",
-          "landmark": "Karnataka",
-          "pincode": "560017",
-          "mobile": "8129612361"
-         }
-    }}
-'
-```
-It returns a preview for a Subscription, without creating a new subscription.
-For a successful subscription, it also return an `attempt_token`.
-
-An `attempt_token` is the identifier of a subscription attempt. It should be sent back with [register & subscribe](#post-register-and-subscribe-a-user) api or [subscribe without login](#post-subscribe-without-login) api to mark an attempt as success.
-
-We highly recommend use of this API before accepting payment form a user.
 
 ## LIST All subscriptions of a user
 
