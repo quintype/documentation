@@ -14,6 +14,7 @@ includes:
   - metype/feed
   - metype/user_generated_content
   - metype/sso
+  - metype/token_authorization
   - metype/wordpress_installation
   - metype/blogger_installation
   - metype/release_notes
