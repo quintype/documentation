@@ -67,3 +67,17 @@ Metype lets publishers use their own authentication system to login user to mety
 </br>
 ### Logout callback
 * To logout the user we need to call `updateUserState` and data to this function with `publisher_logout` action
+
+```javascript
+function listenToLogin(event) {
+      if(event.data.action === "login") {
+        login();
+      }
+    }
+window.addEventListener("message", listenToLogin, false);
+```
+
+### Listening to metype to initiate login
+* Parent window should have an event listener listening to event message.
+* Metype will post data with `login` action in event's data. This should initiate login
+* An example is show here.
