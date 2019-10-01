@@ -65,6 +65,37 @@ Key points that needs your attention:
 3. Colours that are returned in the config API are hex strings and by defaults we return default values.
 4. There is no option to choose colors using UI but our backend supports the feature. If you need changes on these please reach out to us at `metype@quintype.com`
 
+## Third party get user data API
+```shell--request
+curl -X GET \
+  'https://www.metype.com/api/v1/accounts/<account_id>/current_user.json?jwt=jwt_token'
+```
+
+```shell--response
+{
+    "signed_in": true,
+    "current_user": {
+        "name": "super woman",
+        "avatar": null,
+        "id": 109,
+        "slug": "super-woman",
+        "guest": false,
+        "bio": "",
+        "accounts": []
+    },
+    "is_guest": false,
+    "provider": null
+}
+```
+
+1. This is the API to fetch user for third party login.
+2. To understand how to generate JWT check [this.](#third-party-login)
+3. `signed_in` keys helps to understand if login is successful.
+4. `current_user` is contains information about the user with details like `name`, `avatar`, `slug`, `bio`, `accounts`(the accounts user owns)
+5. `is_guest` indicates if the current user session is guest or not.
+6. If the user needs to logout just call the same API without jwt and user data is unavilable.
+
+
 
 ## GET Account Reactions
 
