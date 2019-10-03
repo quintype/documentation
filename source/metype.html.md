@@ -3,6 +3,7 @@ title: Metype API Documentation
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
+  - json-doc
   - shell--request: Request
   - shell--response: Response
 

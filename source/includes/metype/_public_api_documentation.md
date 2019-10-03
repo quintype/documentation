@@ -95,7 +95,50 @@ curl -X GET \
 5. `is_guest` indicates if the current user session is guest or not.
 6. If the user needs to logout just call the same API without jwt and user data is unavilable.
 
+## Comment Actions
 
+### Comment structure
+```json-doc
+{
+    "comment": {
+        "body": {
+            "ops": [
+                {
+                    "insert": "hey 😀"
+                },
+                {
+                    "attributes": {
+                        "link": "http://www.example.com"
+                    },
+                    "insert": "http://www.example.com"
+                },
+                {
+                    "insert": {
+                        "image": "https://quintype.s3-accelerate.amazonaws.com/abc.png"
+                    }
+                }
+            ]
+        }
+    }
+}
+```
+Points to be noted:
+
+1. A comment should have following structure `comment` -> `body` -> `ops`.
+2. `ops` contains the actual content.
+3. `ops` should be an array of object. Three kinds of objects are supported, they are  text, hyperlinks and image.
+
+  1. `Text` should have `insert` as key and value as `string` of text.
+  2. `Hyperlinks` should be object with `attributes` with object having `link` as key and URL as string. Here insert is deplay text fo URL
+  3. `Image` is an object `insert` as key and object as `value` with `image` as key and URL where image is stored as link.
+
+Note:
+
+* Only one image is supported.
+* Image is expeced as the last element of array if any.
+* Links and regular text can go hand in hand but the sequence of array is the sequence followed to display as well.
+
+### Comment creation
 
 ## GET Account Reactions
 
