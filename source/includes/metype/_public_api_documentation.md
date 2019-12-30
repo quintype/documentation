@@ -876,7 +876,7 @@ curl --request POST \
      "attributes":
      [
        {
-        "page_id": "aHR0cCUzQSUyRiUyRnRlc3QuaG9zdCUyRjMzMDc=",
+        "page_id": <uri_base64_encoded_page_url>,
         "metadata": {
           "any": "value",
           "random": "value"
@@ -884,7 +884,7 @@ curl --request POST \
         "read_at": "2019-09-01"
       },
       {
-        "page_id": "aHR0cCUzQSUyRiUyRnRlc3QxLmhvc3Q=",
+        "page_id": <uri_base64_encoded_page_url>,
         "metadata": {
           "any": "value",
           "random": "value"
@@ -895,7 +895,42 @@ curl --request POST \
   }'
 ```
 
-This endpoint can be user to create or update bookmarks in bulk for a give. The parameters that can be passed in are as follows:
+```shell--response
+[
+  {
+    "id"=>"<Id of created bookmark>",
+    "type"=>"bookmark",
+    "attributes"=>
+    {
+      "id"=><Id of created bookmark>,
+      "created_at"=>"2019-12-30T08:41:54.935Z",
+      "updated_at"=>"2019-12-30T08:41:54.935Z",
+      "read_at"=>"2019-09-01T00:00:00.000Z",
+      "metadata"=>{"any"=>"value", "random"=>"value"},
+      "headline"=>nil,
+      "hero_image_url"=>nil,
+      "url"=>"<page url>"
+    }
+  },
+  {
+    "id"=>"<Id of created bookmark>",
+    "type"=>"bookmark",
+    "attributes"=>
+     {
+        "id"=><Id of created bookmark>,
+        "created_at"=>"2019-12-30T08:41:54.943Z",
+        "updated_at"=>"2019-12-30T08:41:54.943Z",
+        "read_at"=>"2019-09-02T00:00:00.000Z",
+        "metadata"=>{"any"=>"value", "random"=>"value"},
+        "headline"=>nil,
+        "hero_image_url"=>nil,
+        "url"=>"<page url>"
+      }
+  }
+]
+```
+
+This endpoint can be used to create or update bookmarks in bulk for a give. It will work in both way session based login and login using JWT. The parameters that can be passed in are as follows:
 
 | key | type | use|
 |--|--|--|
