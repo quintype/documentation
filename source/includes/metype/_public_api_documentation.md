@@ -886,6 +886,83 @@ This endpoint can be used to fetch all bookmark for a given user. The parameters
 
 Please see the 'request' and 'response' tabs on the right for a sample request
 
+### Create or Update a bulk Boomarks
+
+```shell--request
+curl --request POST \
+  --url https://www.metype.com/api/v1/accounts/:account_id/bookmarks/bulk_upload?jwt=<jwt> \
+  --H 'Content-type: application/json' \
+  --data-binary '{
+    "data": {
+     "type": "bookmark",
+     "attributes":
+     [
+       {
+        "page_id": <uri_base64_encoded_page_url>,
+        "metadata": {
+          "any": "value",
+          "random": "value"
+          },
+        "read_at": "2019-09-01"
+      },
+      {
+        "page_id": <uri_base64_encoded_page_url>,
+        "metadata": {
+          "any": "value",
+          "random": "value"
+          },
+        "read_at": "2019-09-02"
+      }
+    ]}
+  }'
+```
+
+```shell--response
+[
+  {
+    "id"=>"<Id of created bookmark>",
+    "type"=>"bookmark",
+    "attributes"=>
+    {
+      "id"=><Id of created bookmark>,
+      "created_at"=>"2019-12-30T08:41:54.935Z",
+      "updated_at"=>"2019-12-30T08:41:54.935Z",
+      "read_at"=>"2019-09-01T00:00:00.000Z",
+      "metadata"=>{"any"=>"value", "random"=>"value"},
+      "headline"=>nil,
+      "hero_image_url"=>nil,
+      "url"=>"<page url>"
+    }
+  },
+  {
+    "id"=>"<Id of created bookmark>",
+    "type"=>"bookmark",
+    "attributes"=>
+     {
+        "id"=><Id of created bookmark>,
+        "created_at"=>"2019-12-30T08:41:54.943Z",
+        "updated_at"=>"2019-12-30T08:41:54.943Z",
+        "read_at"=>"2019-09-02T00:00:00.000Z",
+        "metadata"=>{"any"=>"value", "random"=>"value"},
+        "headline"=>nil,
+        "hero_image_url"=>nil,
+        "url"=>"<page url>"
+      }
+  }
+]
+```
+
+This endpoint can be used to create or update bookmarks in bulk for a give. It will work in both way session based login and login using JWT. The parameters that can be passed in are as follows:
+
+| key | type | use|
+|--|--|--|
+|account_id|integer|Metype account id|
+|jwt|string|The JSON Web Token that identifies the user|
+|page_id|string|Base64 encoded url of the page, encoded with [Web Safe Base 64](http://www.base64url.com)|
+|read_at|timestamp or null|Timestamp the bookmark was read at. This can be set to null if the bookmark is unread|
+|metadata|object|Any additional parameters to be stored|
+
+
 ## Contributions
 
 Contributions allow metype users to create user generated content, which is pushed to the account's Quintype CMS.
