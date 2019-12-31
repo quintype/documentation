@@ -736,7 +736,62 @@ Key points that needs your attention:
 3. Colours that are returned in the config API are hex strings and by defaults we return default values.
 4. There is no option to choose colors using UI but our backend supports the feature. If you need changes on these please reach out to us at `metype@quintype.com`
 
-## GET Count of Page Reactions by metadata
+## Page
+
+### GET Page data
+```shell--request
+curl --location --request GET 'https://www.metype.com/api/v1/accounts/<account_id>/pages/<uri_base64_encoded_page_url>'
+```
+
+```shell--response
+{
+    "page": {
+        "url": "https://www.example.com/eternal-slug",
+        "comments_count": 0,
+        "headline": "Catchy headline",
+        "image": "https://www.image-cdn.com/image.jpg",
+        "metadata": {}
+    }
+}
+```
+
+This endpoint is used to get the details of a page related to particular account
+
+### POST Page metadata
+
+```shell--request
+curl --location --request POST 'https://www.metype.com/api/v1/accounts/<account_id>/pages' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "page": {
+    "metadata": {
+      "author-ids": [1,2]
+    },
+    "page_id": "<uri_base64_encoded_page_url>"
+  }
+}'
+```
+
+```shell--response
+{
+    "page": {
+      "url": "https://www.example.com/eternal-slug",
+      "comments_count": 0,
+      "headline": "Catchy headline",
+      "image": "https://www.image-cdn.com/image.jpg",
+      "metadata": {
+        "author-ids": [1, 2]
+      }
+    }
+}
+```
+
+* This endpoint is used to create or update the metadata of a page related to a particular account
+
+* When using this end point, ideally we can avoid this POST call if we know there is no change in metadata [this](#get-page-data) end point can be used to know the existing metadata.
+
+### GET Count of Page Reactions by metadata
+
 
 ```shell--request
 curl -X GET \
