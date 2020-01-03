@@ -112,6 +112,7 @@ This is documents APIs related to comments APIs. It also gives information about
     "hidden": false,
     "deleted": false,
     "realm_comment_count": 126,
+    "is_page_author": false,
     "author": {},
     "mentions": []
   }],
@@ -143,6 +144,7 @@ headline | string | The title of the story of the page which tagged as `og:title
 hidden | bool | `True` when hidden by author of the comment and vice-versa.
 deleted | bool | `True` when deleted by admin/moderator of the account
 realm_comment_count | integer | Number of published comments in a comment_realm.
+is_page_author | boolean | `True` when comment is made by page author and vice-versa.
 author | object | Contents of this are explained [here] (#get-user-info); null when comment is confidential
 mentions | array | Array of users mentioned in the comment. For more info check here.
 total_count | integer | Number of published comments in a page.
