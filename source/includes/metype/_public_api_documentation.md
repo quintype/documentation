@@ -596,10 +596,13 @@ curl --request GET \
 
 This endpoint can be used to get comments of a user based on an account or all comments of a user. This API returns a 200 if the operation was sucessful.The parameters that can be passed in are as follows:
 
-| key | type | use |
-|--|--|--|
+| key | type | use | default value|
+|--|--|--|--|
 |account_id|integer|Metype account id|
 |jwt|string|The JSON Web Token that identifies the user|
+|page|integer|Page of comments to return (50 per page)| 1 |
+|per_page|integer|Number of comments per page| 20 |
+|order|string|`desc` or `asc` | desc - for latest comments first and vice versa | 'desc' |
 
 * If an `account_id` is passed the check for domain is done
 * This can fetch comments based on JWT or session based on authentication opted by the account.
