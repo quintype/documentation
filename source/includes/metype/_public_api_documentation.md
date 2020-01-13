@@ -596,12 +596,76 @@ curl --request GET \
   --url 'https://www.metype.com/api/v1/activity/comments?account_id=<account_id>&jwt=<jwt>'
 ```
 
+```shell--response
+{
+    "data": [
+        {
+            "id": "8",
+            "type": "activity_comment",
+            "attributes": {
+                "body": {
+                    "ops": [
+                        {
+                            "attributes": {
+                                "mention": {
+                                    "name": "dark knight",
+                                    "slug": "dark-knight",
+                                    "avatar": "https://gothamcity.com/batman-photo.jpg",
+                                    "id": "3",
+                                    "target": "_blank",
+                                    "end-point": "undefined",
+                                    "class": "custom-em"
+                                },
+                                "link": "dark-knight"
+                            },
+                            "insert": {
+                                "mentions": true
+                            }
+                        },
+                        {
+                            "insert": "text\n"
+                        }
+                    ]
+                },
+                "id": 8,
+                "status": "approved",
+                "page": {
+                    "hero_image_url": null,
+                    "headline": null,
+                    "url": "http://example.com/slug"
+                },
+                "toxicity": 0,
+                "created_at": "2019-12-23T05:18:58.551Z",
+                "edited_at": null,
+                "parent_comment": {
+                    "body": {
+                        "ops": [
+                            {
+                                "insert": "parent\n"
+                            }
+                        ]
+                    },
+                    "status": "approved",
+                    "author": {
+                        "name": "dark knight"
+                    }
+                }
+            }
+        }
+    ]
+}
+
+```
+
 This endpoint can be used to get comments of a user based on an account or all comments of a user. This API returns a 200 if the operation was sucessful.The parameters that can be passed in are as follows:
 
-| key | type | use |
-|--|--|--|
+| key | type | use | default value|
+|--|--|--|--|
 |account_id|integer|Metype account id|
 |jwt|string|The JSON Web Token that identifies the user|
+|page|integer|Page of comments to return (20 per page)| 1 |
+|per_page|integer|Number of comments per page| 20 |
+|order|string|`desc` or `asc` | desc - for latest comments first and vice versa | 'desc' |
 
 * If an `account_id` is passed the check for domain is done
 * This can fetch comments based on JWT or session based on authentication opted by the account.
