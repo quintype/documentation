@@ -843,7 +843,7 @@ curl --location --request GET 'https://www.metype.com/api/v1/accounts/<account_i
 }
 ```
 
-This endpoint is used to get all pages of account with filter and sorting. For filtering you can use `time_unit` argument for getting last number of data.
+This endpoint is used to get all pages of account with filter and sorting. You can use `time_unit` and `time_unit_magnitude` for filtering data. For instance, `time_unit` value is "day" and `time_unit_magnitude` value is "1", it will find pages which are created within last 1 day. if `time_unit` value is "day" and `time_unit_magnitude` value is 5, it will find pages which are created within last 5 days.
 
 |key|type|description|
 |--|--|--|
@@ -853,12 +853,6 @@ This endpoint is used to get all pages of account with filter and sorting. For f
 | time_unit_magnitude | Integer | any positive integer | default value will be `1` |
 | page | Integer | any positive integer, it will be used for pagination, for paticular page number | default value will be `1` |
 | per_page | Integer | any positive integer, for getting number of records for per page | default value will be `10` |
-
-How to use `time_unit` and `time_unit_magnitude`
-- `time_unit` can be `day`, `week` or `month`.
-- `time_unit_magnitude` can be any positive integer.
-- For instance, `time_unit` value is "day" and `time_unit_magnitude` value is "1", it will find pages which are created within
-  last 1 day. if `time_unit` value is "day" and `time_unit_magnitude` value is 5, it will find pages which are created within last 5 days.
 
 ## Page
 
