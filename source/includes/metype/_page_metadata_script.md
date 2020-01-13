@@ -15,12 +15,12 @@ Use this script when you want to save some details of a page that you might want
           });
 ```
 
-`pageMetadata` must be a single level javascript object. The values can be of type String, Number, Array. It can not be a nested object.
+`pageMetadata` must be a single level javascript object. The values can be of type String, Number, Array. You need to add `author_ids` in page metadata if you want to use `respond as author` feature. It can not be a nested object.
 
 Some examples of valid metadata objects are:
 
-* { section: ["science", "tech"], author_id: 123 }
+* { section: ["science", "tech"], author_ids: ["123", "456"] }
 
 * { section: "cooking", top: "true" }
 
-
+* { section: ["science", "tech"], author_ids: ["123"] }
