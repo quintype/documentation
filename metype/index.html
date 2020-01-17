@@ -433,10 +433,10 @@
                           <li>
                             <a href="#get-account-config" class="toc-h3 toc-link" data-title="GET Account Config">GET Account Config</a>
                           </li>
+                          <li>
+                            <a href="#get-all-pages-of-account" class="toc-h3 toc-link" data-title="GET all pages of account">GET all pages of account</a>
+                          </li>
                       </ul>
-                  </li>
-                  <li>
-                    <a href="#get-all-pages-of-account" class="toc-h2 toc-link" data-title="API Documentation">GET all pages of account</a>
                   </li>
                   <li>
                     <a href="#page" class="toc-h2 toc-link" data-title="API Documentation">Page</a>
@@ -2300,7 +2300,7 @@ The OAuth libraries will handle the rest in the application if you have integrat
 <li>Colours that are returned in the config API are hex strings and by defaults we return default values.</li>
 <li>There is no option to choose colors using UI but our backend supports the feature. If you need changes on these please reach out to us at <code>metype@quintype.com</code></li>
 </ol>
-<h2 id='get-all-pages-of-account'>GET all pages of account</h2><pre class="highlight shell tab-shell--request"><code>curl --location --request GET <span class="s1">'https://www.metype.com/api/v1/accounts/&lt;account_id&gt;/all_pages'</span>
+<h3 id='get-all-pages-of-account'>GET all pages of account</h3><pre class="highlight shell tab-shell--request"><code>curl --location --request GET <span class="s1">'https://www.metype.com/api/v1/accounts/&lt;account_id&gt;/all_pages'</span>
 </code></pre><pre class="highlight shell tab-shell--response"><code><span class="o">{</span>
     <span class="s2">"total_count"</span>: 12294,
     <span class="s2">"pages"</span>: <span class="o">{</span>
