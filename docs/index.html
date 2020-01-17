@@ -1,0 +1,1090 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Quintype API Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/javascripts/all.js"></script>
+  </head>
+
+  <body class="docs docs_index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="/images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="/images/logo.svg" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction-to-quintype-apis" class="toc-h1 toc-link" data-title="Introduction to Quintype APIs">Introduction to Quintype APIs</a>
+          </li>
+          <li>
+            <a href="#basic-concepts" class="toc-h1 toc-link" data-title="Basic Concepts">Basic Concepts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#stories-cards-and-elements" class="toc-h2 toc-link" data-title="Basic Concepts">Stories- Cards and Elements</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#cards" class="toc-h3 toc-link" data-title="Cards">Cards</a>
+                          </li>
+                          <li>
+                            <a href="#story-elements" class="toc-h3 toc-link" data-title="Story Elements">Story Elements</a>
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#story-element-types" class="toc-h4 toc-link" data-title="Story Element Types">Story Element Types</a>
+                                  </li>
+                                  <li>
+                                    <a href="#story-element-subtypes" class="toc-h4 toc-link" data-title="Story Element Subtypes">Story Element Subtypes</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#story-types" class="toc-h3 toc-link" data-title="Story Types">Story Types</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#stacks" class="toc-h2 toc-link" data-title="Basic Concepts">Stacks</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#sections" class="toc-h3 toc-link" data-title="Sections">Sections</a>
+                          </li>
+                          <li>
+                            <a href="#api-requests" class="toc-h3 toc-link" data-title="API requests">API requests</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#story-groups" class="toc-h2 toc-link" data-title="Basic Concepts">Story Groups</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#em-top-em-stories" class="toc-h3 toc-link" data-title="<em>top</em> stories"><em>top</em> stories</a>
+                          </li>
+                          <li>
+                            <a href="#em-published-em-stories" class="toc-h3 toc-link" data-title="<em>published</em> stories"><em>published</em> stories</a>
+                          </li>
+                          <li>
+                            <a href="#stacks" class="toc-h3 toc-link" data-title="stacks">stacks</a>
+                          </li>
+                          <li>
+                            <a href="#behavior-of-various-story-groups" class="toc-h3 toc-link" data-title="Behavior of various story groups">Behavior of various story groups</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#breaking-news" class="toc-h2 toc-link" data-title="Basic Concepts">Breaking News</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#linking-to-another-story" class="toc-h3 toc-link" data-title="Linking to another story">Linking to another story</a>
+                          </li>
+                          <li>
+                            <a href="#story-group" class="toc-h3 toc-link" data-title="Story Group">Story Group</a>
+                          </li>
+                          <li>
+                            <a href="#api-documentation" class="toc-h3 toc-link" data-title="API Documentation">API Documentation</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#entities" class="toc-h2 toc-link" data-title="Basic Concepts">Entities</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#1-getting-all-the-entities" class="toc-h3 toc-link" data-title="1. Getting all the entities">1. Getting all the entities</a>
+                          </li>
+                          <li>
+                            <a href="#2-getting-particular-entity-details" class="toc-h3 toc-link" data-title="2. Getting particular entity details.">2. Getting particular entity details.</a>
+                          </li>
+                          <li>
+                            <a href="#3-getting-the-nested-entities-linked-to-an-entity" class="toc-h3 toc-link" data-title="3. Getting the nested entities linked to an entity">3. Getting the nested entities linked to an entity</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#architecting-a-front-end-application" class="toc-h1 toc-link" data-title="Architecting a front end application">Architecting a front end application</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#logged-in-content" class="toc-h2 toc-link" data-title="Architecting a front end application">Logged In Content</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#getting-the-logged-in-user-on-the-backend" class="toc-h3 toc-link" data-title="Getting the logged in user on the backend">Getting the logged in user on the backend</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#checking-device-type" class="toc-h2 toc-link" data-title="Architecting a front end application">Checking Device Type</a>
+                  </li>
+                  <li>
+                    <a href="#cache-headers-and-keys" class="toc-h2 toc-link" data-title="Architecting a front end application">Cache Headers and Keys</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#cache-keys" class="toc-h3 toc-link" data-title="Cache Keys">Cache Keys</a>
+                          </li>
+                          <li>
+                            <a href="#cookies" class="toc-h3 toc-link" data-title="Cookies">Cookies</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#failures" class="toc-h2 toc-link" data-title="Architecting a front end application">Failures</a>
+                  </li>
+                  <li>
+                    <a href="#marking-a-page-uncacheable" class="toc-h2 toc-link" data-title="Architecting a front end application">Marking a page uncacheable</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#implementing-a-front-end-application" class="toc-h1 toc-link" data-title="Implementing a Front End Application">Implementing a Front End Application</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#images" class="toc-h2 toc-link" data-title="Implementing a Front End Application">Images</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#base-url" class="toc-h3 toc-link" data-title="Base Url">Base Url</a>
+                          </li>
+                          <li>
+                            <a href="#focus-point" class="toc-h3 toc-link" data-title="Focus Point">Focus Point</a>
+                          </li>
+                          <li>
+                            <a href="#recommended-transforms" class="toc-h3 toc-link" data-title="Recommended Transforms">Recommended Transforms</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#preview" class="toc-h2 toc-link" data-title="Implementing a Front End Application">Preview</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#technical-overview" class="toc-h3 toc-link" data-title="Technical Overview">Technical Overview</a>
+                          </li>
+                          <li>
+                            <a href="#https-only" class="toc-h3 toc-link" data-title="HTTPs Only">HTTPs Only</a>
+                          </li>
+                          <li>
+                            <a href="#example" class="toc-h3 toc-link" data-title="Example">Example</a>
+                          </li>
+                          <li>
+                            <a href="#testing" class="toc-h3 toc-link" data-title="Testing">Testing</a>
+                          </li>
+                          <li>
+                            <a href="#isomorphic-rendering" class="toc-h3 toc-link" data-title="Isomorphic Rendering">Isomorphic Rendering</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#voting-and-rating" class="toc-h2 toc-link" data-title="Implementing a Front End Application">Voting and Rating</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#1-configuring-allowed-magnitudes" class="toc-h3 toc-link" data-title="1. Configuring allowed magnitudes">1. Configuring allowed magnitudes</a>
+                          </li>
+                          <li>
+                            <a href="#2-authentication" class="toc-h3 toc-link" data-title="2. Authentication">2. Authentication</a>
+                          </li>
+                          <li>
+                            <a href="#3-vote" class="toc-h3 toc-link" data-title="3. Vote">3. Vote</a>
+                          </li>
+                          <li>
+                            <a href="#4-get-votes-for-one-or-more-stories" class="toc-h3 toc-link" data-title="4. Get votes for one or more stories">4. Get votes for one or more stories</a>
+                          </li>
+                          <li>
+                            <a href="#5-get-votes-for-a-story-for-a-user" class="toc-h3 toc-link" data-title="5. Get votes for a story for a user">5. Get votes for a story for a user</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#social-logins" class="toc-h2 toc-link" data-title="Implementing a Front End Application">Social Logins</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#facebook" class="toc-h3 toc-link" data-title="Facebook:">Facebook:</a>
+                          </li>
+                          <li>
+                            <a href="#twitter" class="toc-h3 toc-link" data-title="Twitter:">Twitter:</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#sample-applications-and-libraries" class="toc-h1 toc-link" data-title="Sample Applications and Libraries">Sample Applications and Libraries</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#front-end-javascript" class="toc-h2 toc-link" data-title="Sample Applications and Libraries">Front End Javascript</a>
+                  </li>
+                  <li>
+                    <a href="#ruby-on-rails" class="toc-h2 toc-link" data-title="Sample Applications and Libraries">Ruby on Rails</a>
+                  </li>
+                  <li>
+                    <a href="#php-with-laravel" class="toc-h2 toc-link" data-title="Sample Applications and Libraries">PHP (with Laravel)</a>
+                  </li>
+                  <li>
+                    <a href="#node-js-with-react" class="toc-h2 toc-link" data-title="Sample Applications and Libraries">Node.js (with React)</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#analytics" class="toc-h1 toc-link" data-title="Analytics">Analytics</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#web-tracking-qlitics-js" class="toc-h2 toc-link" data-title="Analytics">Web Tracking (qlitics.js)</a>
+                  </li>
+                  <li>
+                    <a href="#google-amp-tracking" class="toc-h2 toc-link" data-title="Analytics">Google AMP Tracking</a>
+                  </li>
+                  <li>
+                    <a href="#automatically-collected-data" class="toc-h2 toc-link" data-title="Analytics">Automatically collected data</a>
+                  </li>
+                  <li>
+                    <a href="#api-methods" class="toc-h2 toc-link" data-title="Analytics">API Methods</a>
+                  </li>
+                  <li>
+                    <a href="#settable-api-properties" class="toc-h2 toc-link" data-title="Analytics">Settable API Properties</a>
+                  </li>
+                  <li>
+                    <a href="#common-api-fields" class="toc-h2 toc-link" data-title="Analytics">Common API Fields</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#card-content-id" class="toc-h3 toc-link" data-title="card-content-id">card-content-id</a>
+                          </li>
+                          <li>
+                            <a href="#card-version-id" class="toc-h3 toc-link" data-title="card-version-id">card-version-id</a>
+                          </li>
+                          <li>
+                            <a href="#member-id" class="toc-h3 toc-link" data-title="member-id">member-id</a>
+                          </li>
+                          <li>
+                            <a href="#page-type" class="toc-h3 toc-link" data-title="page-type">page-type</a>
+                          </li>
+                          <li>
+                            <a href="#social-media-type" class="toc-h3 toc-link" data-title="social-media-type">social-media-type</a>
+                          </li>
+                          <li>
+                            <a href="#story-content-id" class="toc-h3 toc-link" data-title="story-content-id">story-content-id</a>
+                          </li>
+                          <li>
+                            <a href="#story-element-action" class="toc-h3 toc-link" data-title="story-element-action">story-element-action</a>
+                          </li>
+                          <li>
+                            <a href="#story-element-id" class="toc-h3 toc-link" data-title="story-element-id">story-element-id</a>
+                          </li>
+                          <li>
+                            <a href="#story-element-type" class="toc-h3 toc-link" data-title="story-element-type">story-element-type</a>
+                          </li>
+                          <li>
+                            <a href="#story-version-id" class="toc-h3 toc-link" data-title="story-version-id">story-version-id</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#testing" class="toc-h2 toc-link" data-title="Analytics">Testing</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#deployments-and-infrastructure" class="toc-h1 toc-link" data-title="Deployments and Infrastructure">Deployments and Infrastructure</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#default-urls" class="toc-h2 toc-link" data-title="Deployments and Infrastructure">Default URLs</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#staging" class="toc-h3 toc-link" data-title="Staging">Staging</a>
+                          </li>
+                          <li>
+                            <a href="#production" class="toc-h3 toc-link" data-title="Production">Production</a>
+                          </li>
+                          <li>
+                            <a href="#black-knight" class="toc-h3 toc-link" data-title="Black Knight">Black Knight</a>
+                          </li>
+                          <li>
+                            <a href="#production-dns-entries" class="toc-h3 toc-link" data-title="Production DNS Entries">Production DNS Entries</a>
+                          </li>
+                          <li>
+                            <a href="#ssl-https" class="toc-h3 toc-link" data-title="SSL / HTTPS">SSL / HTTPS</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#deploying-with-black-knight" class="toc-h2 toc-link" data-title="Deployments and Infrastructure">Deploying with Black Knight</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#overall-workflow" class="toc-h3 toc-link" data-title="Overall Workflow">Overall Workflow</a>
+                          </li>
+                          <li>
+                            <a href="#compilation-steps" class="toc-h3 toc-link" data-title="Compilation Steps">Compilation Steps</a>
+                          </li>
+                          <li>
+                            <a href="#deployment-steps" class="toc-h3 toc-link" data-title="Deployment Steps">Deployment Steps</a>
+                          </li>
+                          <li>
+                            <a href="#setting-up-configuration" class="toc-h3 toc-link" data-title="Setting Up Configuration">Setting Up Configuration</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#advanced-topics" class="toc-h1 toc-link" data-title="Advanced Topics">Advanced Topics</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#rss-feed" class="toc-h2 toc-link" data-title="Advanced Topics">RSS Feed</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#end-point" class="toc-h3 toc-link" data-title="End point">End point</a>
+                          </li>
+                          <li>
+                            <a href="#supported-parameters" class="toc-h3 toc-link" data-title="Supported parameters">Supported parameters</a>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction-to-quintype-apis'>Introduction to Quintype APIs</h1>
+<p>This repository is a knowledge base for developers working on projects backed by the Quintype platform. The live documentation is available as <a href="/swagger">Swagger</a></p>
+<h1 id='basic-concepts'>Basic Concepts</h1><h2 id='stories-cards-and-elements'>Stories- Cards and Elements</h2>
+<p>Quintype provides a structured CMS system.
+A story is comprised of cards, and cards contain story elements.</p>
+<h3 id='cards'>Cards</h3>
+<p>Cardification is a new paradigm targetted towards mobile-first consumption of news. Short and concise chunked blocks of content tend to have much higher engagement. Quintype stories are split into multiple cards. Frontend applications can choose to represent these cards visually, allowing users to interact with these cards directly.</p>
+
+<p>Any API request for stories contain the cards that comprise the story in the <em>&quot;cards&quot;</em> field (as an array). These cards comprise the body of the story.</p>
+<h3 id='story-elements'>Story Elements</h3>
+<p>Story elements are the smallest logical unit in the Quintype platform. Each story element represents a single paragraph of text, image, video, or other unit of content. Story elements form a card. Quintype also tracks these story elements and derives analytics reports based on user engagement on stories containing specific elements.</p>
+
+<p>For eg: A story on tennis containing more photo story elements might get higher engagement.</p>
+
+<p>The story elements can be found in the <em>&quot;story-elements&quot;</em> field of individual cards.</p>
+<h4 id='story-element-types'>Story Element Types</h4>
+<p>Each story element has a <em>&quot;type&quot;</em>, and optionally a <em>&quot;subtype&quot;</em>. There are currently five major types of story elements, which all front end applications must support. They are as follows:</p>
+
+<ul>
+<li>text - a paragraph of text</li>
+<li>image - an image</li>
+<li>youtube-video - a video on youtube</li>
+<li>soundcloud-audio - a piece of audio on soundcloud</li>
+<li>title - a title for a card (listicle)</li>
+<li>jsembed - arbitrary, unsafe HTML</li>
+<li>composite - an element depending on other story elements</li>
+</ul>
+<h4 id='story-element-subtypes'>Story Element Subtypes</h4>
+<p>Story elements may also have a <em>&quot;subtype&quot;</em> field, which gives hints on rendering for clients that know how to render the subtype. For example, a <em>jsembed</em> element may have the <em>twitter</em> subtype. Looking at the metadata, you will find the <em>tweet-id</em> of the particular tweet. Clients may choose to render this element as a <em>jsembed</em>, or as a native twitter element (and provide optimizations such as ensuring that the twitter SDK is only loaded once).</p>
+<h3 id='story-types'>Story Types</h3>
+<p>Story type are predefined templates which can be used to write articles of various domains ranging from photo blogs, listicles, video stories, blogs etc. Story types give a definite structure and a &quot;starting point&quot; to authors when they start writing a story. They also help in predictive analytics. Data can be derived and studied based on audience engagement on various story types for different domains, for example, a photo story on wildlife may get higher engagement than a text story.</p>
+
+<p>A story type may give subtle hints to the behaviour of the story. For example, a <em>live-blog</em> may choose to auto update every 30seconds.</p>
+<h2 id='stacks'>Stacks</h2>
+<p>A stack is a group of stories, which can be displayed anywhere on the homepage or other pages. The grouping of stories is done manually (or programatically), using the <em>Sorters</em> interface on the CMS. A closely related concept is the <a href="#story-collections">Story Collection</a>.</p>
+<h3 id='sections'>Sections</h3>
+<p>Stacks can have stories in the &quot;Home&quot; section (global), as well as within a section. For information on how this works, please see the <a href="#story-groups">Story Groups</a> page.</p>
+<h3 id='api-requests'>API requests</h3>
+<p>A stack can be requested using the <em>story-group</em> parameter to the stories API. The <a href="/swagger">Swagger Documentation</a> contains information on how to fetch stories within a stack.</p>
+<h2 id='story-groups'>Story Groups</h2>
+<p><em>story-group</em> is the most important parameter to the stories API. This parameter indicates which set of stories you&#39;d like to fetch. Currently, the story group can be <em>top</em>, or <em>published</em>, or <em>stack-{{id}}</em>, corresponding to top stories, stories in published order and stacks respectively.</p>
+
+<p>Story groups that are backed by a sorter can be sorted by</p>
+<h3 id='em-top-em-stories'><em>top</em> stories</h3>
+<p>The &#39;top stories&#39; group is an infinitely long list. This first manually picks sorted stories from the list, then continues with stories in published order (reverse chronological).</p>
+<h3 id='em-published-em-stories'><em>published</em> stories</h3>
+<p>The &#39;published stories&#39; group returns stories in published order (reverse chronological), skipping the order from the sorters.</p>
+<h3 id='stacks'>stacks</h3>
+<p>The stack stories will only return stories in the sorter. As an exception, if a sorter for a (stack / section) combination is empty, it will fall back to the stories in (stack / &quot;Home&quot;)</p>
+<h3 id='behavior-of-various-story-groups'>Behavior of various story groups</h3>
+<p>Various story groups behave slightly differently. Each story group typically has a sorter, except for &#39;published&#39;.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><em>story-group</em></th>
+<th><em>&quot;Home&quot;</em></th>
+<th><em>section</em></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">top</td>
+<td>Stories as per sorter, then stories reverse chronologically</td>
+<td>Stories as per sorter, then stories in that section reverse chronologically</td>
+</tr>
+<tr>
+<td style="text-align: center">stack-id</td>
+<td>Stories as per sorter</td>
+<td>If the sorter has stories, then it returns the sorted stories. If the sorter is empty, it will return stories for the same stack in the &quot;Home&quot; section</td>
+</tr>
+</tbody></table>
+<h2 id='breaking-news'>Breaking News</h2>
+<p>Breaking news can be used to quickly push current events to users as they are happening. These stories may not be fully formed, and only require a headline. These Breaking news events can be linked to a story, after the push has happened.</p>
+<h3 id='linking-to-another-story'>Linking to another story</h3>
+<p>The breaking news story can be linked to an existing story, or added later. Clicking on the breaking news opens the story. The breaking news API automatically fetches the latest headline and slug of the linked story.</p>
+<h3 id='story-group'>Story Group</h3>
+<p>The breaking news API accepts a <em>story-group</em> parameter, to give access to another breaking news sorter.</p>
+<h3 id='api-documentation'>API Documentation</h3>
+<p>Please see the <a href="/swagger#/breaking-news/get_api_v1_breaking_news">swagger documentation</a> for details on how to use the API.</p>
+<h2 id='entities'>Entities</h2>
+<p>Entity provide structured information which is relevant to a publisher. An entity can be referred in relevant stories.</p>
+
+<p>The representation of linked entities on the front end is contextual to the purpose for which it is referred in stories.
+Example of entity is a person (referred to as ‘entity type’) which has the structure such as name, avatar, email address, social handle, bio, company associated with it.</p>
+
+<p>Entity types can only be created by the Quintype team, based on a publisher&#39;s requirement.
+Entity type can contain text, numerics, image, or another entity.</p>
+
+<p>Publishers can add values (referred to as entities) to the entity type by using the ‘Entity Manager’ and these values can be referred to in stories. The Entity manager can also be used to modify existing entities.</p>
+
+<p>There are three endpoints to access entities:</p>
+<h3 id='1-getting-all-the-entities'>1. Getting all the entities</h3>
+<p>Use the <a href="/swagger#/entity/get_api_v1_entities">GET ENTITIES API</a> to get all the entities created.</p>
+<h3 id='2-getting-particular-entity-details'>2. Getting particular entity details.</h3>
+<p>Use the <a href="/swagger#/entity/get_api_v1_entities__id_">GET ENTITY API</a> with the entity-id.</p>
+<h3 id='3-getting-the-nested-entities-linked-to-an-entity'>3. Getting the nested entities linked to an entity</h3>
+<p>Use the <a href="/swagger#/entity/get_api_v1_entities__id___subentity__">GET ENTITY API</a> with the root entity-id followed by the nested-entity key.</p>
+<h1 id='architecting-a-front-end-application'>Architecting a front end application</h1>
+<p>Front End Application on the Quintype platform should be built in such a way that they can be served from a CDN cache. This drastically reduces load time, and the amount of load on the backend server. However, this puts a few constraints on the architecture of many pages.</p>
+
+<p>All pages that want to be cached</p>
+
+<ul>
+<li>Cannot access the current user, or check if the user is logged in</li>
+<li>Cannot check the current device type</li>
+</ul>
+<h2 id='logged-in-content'>Logged In Content</h2>
+<p>As a general practice, it&#39;s important to render the page as a logged out page, so that it can be served from the CDN. The page can then be updated via AJAX queries. In case the page must be rendered server side, with logged in content (ex: Personalized Home Page), then mark the page as uncacheable. Do keep in mind that all calls to <code>/api/v1/...</code> will automatically pass the <code>session-cookie</code> cookie to the API server, which will in turn be able to find out who the user is.</p>
+<h3 id='getting-the-logged-in-user-on-the-backend'>Getting the logged in user on the backend</h3>
+<p>Sketches and the client app share the <code>session-cookie</code> cookie. However, it’s an encrypted object only sketches can read. In order to read the current member, call <code>/api/v1/members/me</code>, passing in the value of <code>session-cookie</code> as the <code>X-QT-AUTH</code> header, to get the current user. Don’t bother saving a separate.</p>
+<h2 id='checking-device-type'>Checking Device Type</h2>
+<p>As the content is cached, it is not permitted to check for Mobile / Tablet / Desktop or other Form Factor. Please use responsive CSS to style the content as required. If it is not possible to avoid device checks, please mark the page as uncacheable.</p>
+<h2 id='cache-headers-and-keys'>Cache Headers and Keys</h2>
+<p>The following HTTP Headers should be returned with every HTTP response which should be cached.</p>
+<pre class="highlight plaintext"><code>Cache-Control: public,max-age=0
+Surrogate-Control: public,max-age=30,stale-while-revalidate=120,stale-if-error=3600
+Surrogate-Key: q/55/top/home s/55/d7f8965d s/55/b93cbb75 s/55/2eb36ec1 ss/55/fae74aa1
+Vary: Accept-Encoding
+</code></pre>
+<p>The <code>Cache-Control</code> header is passed on the the browser, while the <code>Surrogate-Key</code> is processed by the CDN provider. However, they behave very similar. The options are as follows.</p>
+
+<ul>
+<li><code>public</code>/<code>private</code>/<code>no-cache</code> - Please use <code>public</code> if the page is cacheable, and <code>private,no-cache</code> otherwise.</li>
+<li><code>max-age=n</code> - This controls how long the page is considered fresh in the Database</li>
+<li><code>stale-while-revalidate=n</code> - During this period, the page is served from CDN, but updated in the background.</li>
+<li><code>stale-if-error=n</code> - During this time, the page is served from CDN in case the backend server crashes for whatever reason.</li>
+</ul>
+<h3 id='cache-keys'>Cache Keys</h3>
+<p>Currently, we support the following keys, which will be invalidated by the Quintype editor when a story or group updates. Currently, the following keys are supported:</p>
+
+<ul>
+<li><code>s/$publisher-id/$story-id</code> where story-id is the first 8 digits of the story id.</li>
+<li><code>q/$publisher-id/$story-group/$location-id</code> where story-group is <code>top</code> or <code>stack-$id</code>, and location is <code>home</code> or <code>section-id</code>.</li>
+</ul>
+
+<p>If you would like a soft purge on this key, prefix the key above with an <code>s</code>.</p>
+<h3 id='cookies'>Cookies</h3>
+<p>It is very important that all cookies are stripped from requests which are to be cached. This can be enforced by the following methods:</p>
+
+<ul>
+<li><a href="https://github.com/gja/rack-delete_cookies_from_public_requests">Ruby</a></li>
+<li><a href="https://github.com/gja/rack-delete_cookies_from_public_requests">PHP</a></li>
+</ul>
+<h2 id='failures'>Failures</h2>
+<p>In order for the CDN to serve error pages (in case the site is down), the backend server must return a <code>5xx</code> response.</p>
+
+<p>Our CDN treats <code>404</code> and other status codes <code>&lt; 500</code> as intentional failures, and these pages will be served instead of using a page marked with <code>stale-if-error</code>.</p>
+<h2 id='marking-a-page-uncacheable'>Marking a page uncacheable</h2>
+<p>To mark a page as uncacheable, please use the following header.
+<code>
+Cache-Control: private,no-cache
+</code></p>
+<h1 id='implementing-a-front-end-application'>Implementing a Front End Application</h1><h2 id='images'>Images</h2>
+<p>Quintype currently uses <a href="https://www.imgix.com">Imgix</a> to display images in various aspect ratios.</p>
+<h3 id='base-url'>Base Url</h3>
+<p>A image&#39;s URL can be obtained by appending the <em>&quot;image-s3-key&quot;</em> to &quot;http://quintype-01.imgix.net/&quot;. For example, the hero image whose s3 key is &quot;quintype-demo/1234/foo.png&quot; is &quot;http://quintype-01.imgix.net/quintype-demo/1234/foo.png&quot;. This is the image in it&#39;s original resolution, and can be transformed using any of <a href="https://docs.imgix.com">Imgix&#39;s Transforms</a>.</p>
+<h3 id='focus-point'>Focus Point</h3><pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">FocusedImage</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"quintype-js"</span><span class="p">).</span><span class="nx">FocusedImage</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">image</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FocusedImage</span><span class="p">(</span><span class="s1">'quintype-demo/1234/foo.png'</span><span class="p">,</span> <span class="nx">metadata</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">output_url</span> <span class="o">=</span> <span class="s2">"http://quintype-01.imgix.net/"</span> <span class="o">+</span> <span class="nx">image</span><span class="p">.</span><span class="nx">path</span><span class="p">([</span><span class="mi">16</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">{</span><span class="na">w</span><span class="p">:</span> <span class="mi">640</span><span class="p">});</span>
+</code></pre>
+<p>Our editor allows the placement of a focus point on any image. The placement of a focus point guarantees that that point is always present in the viewport when the image is cropped, across different aspect ratios.</p>
+
+<p>It is recommended that the focus point is used in conjuncture with the <em>picture</em> spec of HTML5, in order to show images at different aspect ratios on different devices. Using an <code>object-fit: cover;</code> will further center the image.</p>
+
+<p>The refrence implementation for the focus point algorithm can be found in the <a href="https://github.com/quintype/quintype-js/blob/master/lib/focused_image.js">javascript implementation</a>.</p>
+
+<p>The focus final image url can be calculated with the following pseudo code (for a 16x9 image with final width 640)</p>
+<h3 id='recommended-transforms'>Recommended Transforms</h3><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">transforms</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">w</span><span class="p">:</span> <span class="mi">640</span><span class="p">,</span>       <span class="c1">// actual width</span>
+  <span class="na">q</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>        <span class="c1">// quality</span>
+  <span class="na">auto</span><span class="p">:</span> <span class="nx">format</span>  <span class="c1">// use WebP when available</span>
+  <span class="na">fm</span><span class="p">:</span> <span class="nx">pjpg</span>      <span class="c1">// fallback to progressive jpeg</span>
+<span class="p">};</span>
+</code></pre>
+<p>In order to save bandwidth, and provide a good experience, we suggest you use the following transforms:</p>
+
+<p>The list of all transforms can be found in the <a href="https://docs.imgix.com">Imgix Documentatation</a>.</p>
+<h2 id='preview'>Preview</h2><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">StoryPreview</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"message"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">getLiquidTemplate</span><span class="p">(</span><span class="s2">"pages/story"</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">story</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="s1">'story'</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">story</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s2">"#story-preview"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">template</span><span class="p">.</span><span class="nx">render</span><span class="p">({</span><span class="na">story</span><span class="p">:</span> <span class="nx">story</span><span class="p">,</span> <span class="na">preview</span><span class="p">:</span> <span class="kc">true</span><span class="p">}));</span>
+
+      <span class="c1">// Do other things to make the page work correctly, such as post load JS</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre><h3 id='technical-overview'>Technical Overview</h3>
+<p>The preview functionality is implemented with a combination of the backend editor, and the front end UI. The front end page has to implement two routes. <code>/preview/story</code> and <code>/preview/home</code>. The editor fetches this page via either HTTP or HTTPS, then served in an IFrame on the editor (via HTTPS). As the story is updated in the editor, the story is passed to the page via the message API, and the page is expected to rerender on the Front End.</p>
+<h3 id='https-only'>HTTPs Only</h3>
+<p>As the content is loaded via HTTPS, any HTTP content (external JS, etc...) will not render.</p>
+<h3 id='example'>Example</h3>
+<p>On the right is sample code explaining how to listen via the IFrame message API.</p>
+<h3 id='testing'>Testing</h3><pre class="highlight javascript tab-javascript"><code><span class="nb">window</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span><span class="na">story</span><span class="p">:</span> <span class="p">{</span><span class="s2">"author-name"</span><span class="p">:</span><span class="s2">"Tapan Bhat"</span><span class="p">,</span><span class="s2">"headline"</span><span class="p">:</span><span class="s2">"The Greatest !"</span><span class="p">,</span><span class="s2">"slug"</span><span class="p">:</span><span class="s2">"sports/2016/06/08/the-greatest"</span><span class="p">,</span><span class="s2">"last-published-at"</span><span class="p">:</span><span class="mi">1465407509866</span><span class="p">,</span><span class="s2">"alternative"</span><span class="p">:{},</span><span class="s2">"sections"</span><span class="p">:[{</span><span class="s2">"id"</span><span class="p">:</span><span class="mi">82</span><span class="p">,</span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Sports"</span><span class="p">}],</span><span class="s2">"hero-image-metadata"</span><span class="p">:{</span><span class="s2">"width"</span><span class="p">:</span><span class="mi">2133</span><span class="p">,</span><span class="s2">"height"</span><span class="p">:</span><span class="mi">1906</span><span class="p">,</span><span class="s2">"focus-point"</span><span class="p">:[</span><span class="mi">988</span><span class="p">,</span><span class="mi">258</span><span class="p">]},</span><span class="s2">"published-at"</span><span class="p">:</span><span class="mi">1465407509866</span><span class="p">,</span><span class="s2">"id"</span><span class="p">:</span><span class="s2">"1d2fc836-4113-4ae1-8735-377167664892"</span><span class="p">,</span><span class="s2">"hero-image-s3-key"</span><span class="p">:</span><span class="s2">"quintype-demo/2016-06/cca8f31e-9264-4ee2-9af0-08eb53be2a26/ABP-1.jpg"</span><span class="p">,</span><span class="s2">"author-id"</span><span class="p">:</span><span class="mi">2041</span><span class="p">,</span><span class="s2">"first-published-at"</span><span class="p">:</span><span class="mi">1465407509866</span><span class="p">,</span><span class="s2">"story-template"</span><span class="p">:</span><span class="s2">"photo"</span><span class="p">},</span> <span class="s2">"action"</span><span class="p">:</span> <span class="s2">"reloadStory"</span><span class="p">},</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">origin</span><span class="p">)</span>
+</code></pre>
+<p>Head to <em>/preview/home</em>, then paste the following in the console. The page should immediately render with the sample story.</p>
+
+<p>The <em>/preview/story</em> should also behave similarly, but render the story.</p>
+<h3 id='isomorphic-rendering'>Isomorphic Rendering</h3>
+<p>In order to render from both the server side, and the client side, it is suggested that you use a templating language capable of Isomorphic Rendering. Some suggestions are <a href="https://shopify.github.io/liquid">Liquid Templates</a> or <a href="http://twig.sensiolabs.org">Twig</a></p>
+<h2 id='voting-and-rating'>Voting and Rating</h2>
+<p>End users have the ability vote on/rate a specific story. Potential applications include upvote/downvote, like/dislike, star rating etc.</p>
+
+<p>Each story has multiple types of ratings (&#39;magnitude&#39;)  whose value can be incremented using an API.</p>
+<h3 id='1-configuring-allowed-magnitudes'>1. Configuring allowed magnitudes</h3>
+<p>This is a one-time setup, where the publisher needs to come up with a list of allowed magnitudes for their voting system. It could be <code>[&#39;upvote&#39;, &#39;downvote&#39;]</code>, <code>[&#39;like&#39;, &#39;dislike&#39;]</code>, <code>[1, 2, 3, 4, 5]</code>, etc.</p>
+
+<p>Currently, there is no API to set this. Please contact us to make this change.</p>
+<h3 id='2-authentication'>2. Authentication</h3>
+<p>Make sure the user is logged in, via one of our supported authentication methods.</p>
+
+<p>Currently, we do not support anonymous voting.</p>
+<h3 id='3-vote'>3. Vote</h3>
+<p>Use the <a href="http://petstore.swagger.io/?url=https://itsman.quintype.com/sketches-swagger.json#!/vote/post_api_stories_story_id_votes">POST Vote API</a> to vote on an article. You need to send an allowed magnitude.</p>
+<h3 id='4-get-votes-for-one-or-more-stories'>4. Get votes for one or more stories</h3>
+<p>Use any one of the <a href="http://petstore.swagger.io/?url=https://itsman.quintype.com/sketches-swagger.json#!/story">GET Stories</a> APIs, but make sure you pass <code>votes</code> in the fields list.</p>
+<h3 id='5-get-votes-for-a-story-for-a-user'>5. Get votes for a story for a user</h3>
+<p>Use the <a href="http://petstore.swagger.io/?url=https://itsman.quintype.com/sketches-swagger.json#!/vote/get_api_stories_story_id_votes">GET Vote API</a> to get the votes for a particular story, for the currently logged-in member. Possible uses include finding if a user has voted or not, and the magnitude of their vote.</p>
+<h2 id='social-logins'>Social Logins</h2><h3 id='facebook'>Facebook:</h3>
+<ol>
+<li>Create an app at <a href="https://developers.facebook.com">https://developers.facebook.com</a></li>
+<li>Click on ‘Get started’ against Facebook Login.</li>
+<li>Under Valid OAuth redirect URIs in Facebook Login settings, add the following urls:
+
+<ol>
+<li><strong>site_url</strong>/auth</li>
+<li><strong>site_url</strong>/auth/facebook/callback</li>
+<li><strong>site_url</strong>/admin/add-social.callback</li>
+</ol></li>
+<li>In the app’s Basic settings, click on Add Platform and add Website with the <strong>site_url</strong>.</li>
+<li>Insert the App ID and App secret generated in our database.</li>
+<li>Now, to login to our site using Facebook login, call the URL: <strong>site_url</strong>/login?auth-provider=facebook&amp;remote-host=<strong>site_url</strong></li>
+<li>To get the details of the logged in user, call <strong>api_host</strong>/api/v1/members/me</li>
+</ol>
+<h3 id='twitter'>Twitter:</h3>
+<ol>
+<li>Create an app at <a href="https://apps.twitter.com">https://apps.twitter.com</a></li>
+<li>Enter the basic details</li>
+<li>Insert API key and API secret generated in our database.</li>
+<li>Now, to login to our site using Facebook login, call the URL: <strong>site_url</strong>/login?auth-provider=twitter&amp;remote-host=<strong>site_url</strong></li>
+<li>To get the details of the logged in user, call <strong>api_host</strong>/api/v1/members/me</li>
+</ol>
+<h1 id='sample-applications-and-libraries'>Sample Applications and Libraries</h1>
+<p>We have published a number of starter-kits for various popular languages. Please clone these, and use this as a starting point.</p>
+<h2 id='front-end-javascript'>Front End Javascript</h2>
+<ul>
+<li>The Image resizing functions is available via the <a href="https://github.com/quintype/quintype-js">quintype-js</a> npm module</li>
+</ul>
+<h2 id='ruby-on-rails'>Ruby on Rails</h2>
+<p>The Ruby on Rails starter kit can be found here: <a href="https://github.com/quintype/coconut">Coconut</a>. The following libraries are used (and patches appreciated)</p>
+
+<ul>
+<li><a href="https://github.com/quintype/quintype-api-ruby">Quintype Ruby API</a></li>
+<li><a href="https://github.com/quintype/quintype-liquid">Quintype Liquid</a></li>
+<li><a href="https://github.com/quintype/quintype-routes">Quintype Routes</a></li>
+</ul>
+<h2 id='php-with-laravel'>PHP (with Laravel)</h2>
+<p>The PHP / Laravel application can be found here: <a href="https://github.com/quintype/pina-colada">Pina Colada</a></p>
+<h2 id='node-js-with-react'>Node.js (with React)</h2>
+<p>Node.js application can be found here: <a href="https://github.com/quintype/malibu">Pina Colada</a></p>
+<h1 id='analytics'>Analytics</h1><h2 id='web-tracking-qlitics-js'>Web Tracking (qlitics.js)</h2><pre class="highlight html tab-html"><code><span class="c">&lt;!-- Qlitics Snippet --&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">qlitics</span><span class="o">=</span><span class="nb">window</span><span class="p">.</span><span class="nx">qlitics</span><span class="o">||</span><span class="kd">function</span><span class="p">(){(</span><span class="nx">qlitics</span><span class="p">.</span><span class="nx">q</span><span class="o">=</span><span class="nx">qlitics</span><span class="p">.</span><span class="nx">q</span><span class="o">||</span><span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);};</span>
+  <span class="nx">qlitics</span><span class="p">(</span><span class="s1">'init'</span><span class="p">);</span>
+  <span class="nx">qlitics</span><span class="p">(</span><span class="s1">'track'</span><span class="p">,</span> <span class="s1">'page-view'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'page-type'</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">page_type</span><span class="o">&gt;</span> <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">'/qlitics.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="c">&lt;!-- End Qlitics Snippet --&gt;</span>
+</code></pre>
+<p>The <code>qlitics.js</code> Javascript library is used for tracking user interaction with the frontend website.</p>
+
+<p>The frontend website needs to implement a route <code>/qlitics.js</code> that proxies to the same route on <code>API_HOST</code>. It also needs to embed the following script before the closing <code>&lt;/head&gt;</code> tag (or as early as possible).</p>
+
+<p><code>&lt;page_type&gt;</code> is a placeholder for current page&#39;s type. The <code>qlitics.js</code> snippet served by <code>API_HOST</code> has the correct <code>publisher-id</code> hardcoded in it.</p>
+<h2 id='google-amp-tracking'>Google AMP Tracking</h2><pre class="highlight html tab-html"><code><span class="c">&lt;!-- Qlitics Tracking --&gt;</span>
+<span class="nt">&lt;amp-analytics&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"application/json"</span><span class="nt">&gt;</span>
+<span class="p">{</span>
+    <span class="s2">"requests"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"storyview"</span><span class="p">:</span><span class="s2">"&lt;qlitics_host&gt;/api/${random}/amp?publisher-id=${publisherId}&amp;event-type=${eventType}&amp;story-content-id=${storyContentId}&amp;url=${ampdocUrl}&amp;referrer=${documentReferrer}"</span>
+    <span class="p">}</span>
+    <span class="p">,</span>
+    <span class="s2">"vars"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"publisherId"</span><span class="p">:</span> <span class="o">&lt;</span><span class="nx">publisher_id</span><span class="o">&gt;</span><span class="p">,</span> <span class="s2">"storyContentId"</span><span class="p">:</span> <span class="s2">"&lt;story_content_id&gt;"</span>
+    <span class="p">}</span>
+    <span class="p">,</span>
+    <span class="s2">"triggers"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"trackStoryview"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"on"</span><span class="p">:</span><span class="s2">"visible"</span><span class="p">,</span>
+            <span class="s2">"request"</span><span class="p">:</span><span class="s2">"storyview"</span><span class="p">,</span>
+            <span class="s2">"vars"</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">"eventType"</span><span class="p">:</span> <span class="s2">"story-view"</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/amp-analytics&gt;</span>
+<span class="c">&lt;!-- End Qlitics Tracking --&gt;</span>
+</code></pre>
+<p><code>&lt;publisher_id&gt;</code>, <code>&lt;qlitics_host&gt;</code> <code>&lt;story_content_id&gt;</code> are placeholders and need to be replaced with equivalent placeholders as per the templating language being used.</p>
+<h2 id='automatically-collected-data'>Automatically collected data</h2>
+<p>The snippet automatically records the following data</p>
+
+<ul>
+<li>Current page url</li>
+<li>Geographic location of the user</li>
+<li>Operating System and browser being used</li>
+<li>Referring site</li>
+<li>User agent</li>
+</ul>
+<h2 id='api-methods'>API Methods</h2><pre class="highlight javascript tab-javascript"><code><span class="nx">qlitics</span><span class="p">(</span><span class="s1">'init'</span><span class="p">);</span>
+</code></pre>
+<ul>
+<li><code>init</code>
+ Initializes the tracker. Should be the first api to be called. It generates (or reuses) the device tracking id and the session id.</li>
+</ul>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">qlitics</span><span class="p">(</span><span class="s1">'set'</span><span class="p">,</span> <span class="s1">'member-id'</span><span class="p">,</span> <span class="mi">1234</span><span class="p">);</span>
+</code></pre>
+<ul>
+<li><code>set</code> Used to set a property on the tracker. Accepts a <code>property</code> and a <code>value</code> for that property.
+
+<ul>
+<li><code>property</code> String. One of the <a href="#settable-api-properties">settable properties</a>.</li>
+<li><code>value</code> Any. Value for the property. Check documentation for the specific property.</li>
+</ul></li>
+</ul>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">qlitics</span><span class="p">(</span><span class="s1">'track'</span><span class="p">,</span> <span class="s1">'page-view'</span><span class="p">,</span> <span class="p">{</span><span class="s1">'page-type'</span><span class="p">:</span> <span class="s1">'home'</span><span class="p">});</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">qlitics</span><span class="p">(</span><span class="s1">'track'</span><span class="p">,</span> <span class="s1">'story-view'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="s1">'story-content-id'</span><span class="p">:</span> <span class="s1">'9b2fe90f-b155-4624-862e-88c981c9da6c'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">qlitics</span><span class="p">(</span><span class="s1">'track'</span><span class="p">,</span> <span class="s1">'story-element-view'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="s1">'story-content-id'</span><span class="p">:</span> <span class="s1">'9b2fe90f-b155-4624-862e-88c981c9da6c'</span><span class="p">,</span>
+  <span class="s1">'story-version-id'</span><span class="p">:</span> <span class="s1">'bc1295de-1b29-4588-8822-3949510b5fd6'</span><span class="p">,</span>
+  <span class="s1">'card-content-id'</span><span class="p">:</span> <span class="s1">'505d5c9d-e776-4f17-bd53-8dd8d579122d'</span><span class="p">,</span>
+  <span class="s1">'card-version-id'</span><span class="p">:</span> <span class="s1">'abfcabf3-6dcc-4791-a87e-16a36c1b1ae6'</span><span class="p">,</span>
+  <span class="s1">'story-element-id'</span><span class="p">:</span> <span class="s1">'1f97a56d-be01-4a2d-b319-0e88cf9a2259'</span><span class="p">,</span>
+  <span class="s1">'story-element-type'</span><span class="p">:</span> <span class="s1">'youtube-video'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">qlitics</span><span class="p">(</span><span class="s1">'track'</span><span class="p">,</span> <span class="s1">'story-element-action'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="s1">'story-content-id'</span><span class="p">:</span> <span class="s1">'9b2fe90f-b155-4624-862e-88c981c9da6c'</span><span class="p">,</span>
+  <span class="s1">'story-version-id'</span><span class="p">:</span> <span class="s1">'bc1295de-1b29-4588-8822-3949510b5fd6'</span><span class="p">,</span>
+  <span class="s1">'card-content-id'</span><span class="p">:</span> <span class="s1">'505d5c9d-e776-4f17-bd53-8dd8d579122d'</span><span class="p">,</span>
+  <span class="s1">'card-version-id'</span><span class="p">:</span> <span class="s1">'abfcabf3-6dcc-4791-a87e-16a36c1b1ae6'</span><span class="p">,</span>
+  <span class="s1">'story-element-id'</span><span class="p">:</span> <span class="s1">'1f97a56d-be01-4a2d-b319-0e88cf9a2259'</span><span class="p">,</span>
+  <span class="s1">'story-element-type'</span><span class="p">:</span> <span class="s1">'youtube-video'</span><span class="p">,</span>
+  <span class="s1">'story-element-action'</span><span class="p">:</span> <span class="s1">'play'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">qlitics</span><span class="p">(</span><span class="s1">'track'</span><span class="p">,</span> <span class="s1">'story-share'</span><span class="p">,</span> <span class="p">{</span>
+  <span class="s1">'story-content-id'</span><span class="p">:</span> <span class="s1">'9b2fe90f-b155-4624-862e-88c981c9da6c'</span><span class="p">,</span>
+  <span class="s1">'social-media-type'</span><span class="p">:</span> <span class="s1">'facebook'</span><span class="p">,</span>
+  <span class="s1">'url'</span><span class="p">:</span> <span class="s1">'https://publisher-domain.com/story-slug'</span><span class="p">,</span>
+<span class="p">});</span>
+</code></pre>
+<ul>
+<li><p><code>track</code> Used to track one of the following user interaction events.</p>
+
+<ul>
+<li><code>page-view</code> Should be called on every page load. Shouldn&#39;t be called for pages loaded via ajax. Accepts a hashmap specifying the <a href="#page-type"><code>page-type</code></a>. Refer <a href="#common-api-fields">common API fields</a>.</li>
+<li><code>story-view</code> Should be called when a story page is loaded. A story view depends on a page-view and should be called only after a <code>page-view</code> has been tracked. If additional stories are being loaded via ajax, then this event should be tracked for each of those stories as well. This will reuse the initially triggered page-view&#39;s identifier. Refer <a href="#common-api-fields">common API fields</a>.</li>
+<li><code>story-element-view</code> Should be called the first time a <a href="./stories-cards-and-elements">story element</a> comes into the browser&#39;s viewport. This is used to track which all story elements did the user actually view and how much time was spent on that story. Refer <a href="#common-api-fields">common API fields</a>.</li>
+<li><code>story-element-action</code> Should be called to track any user interaction with a story element. For example, the playing and pausing of a youtube video, as well as whether the user saw the entire video or not can be tracked. Refer <a href="#common-api-fields">common API fields</a>.</li>
+<li><code>story-share</code> Should be called when a user shares a story on social media via the story page. Refer <a href="#common-api-fields">common API fields</a>.</li>
+</ul></li>
+</ul>
+<h2 id='settable-api-properties'>Settable API Properties</h2>
+<ul>
+<li><a href="#member-id"><code>member-id</code></a></li>
+</ul>
+<h2 id='common-api-fields'>Common API Fields</h2><h3 id='card-content-id'>card-content-id</h3>
+<p>String UUID. The id for the <a href="./stories-cards-and-elements">card</a>.</p>
+<h3 id='card-version-id'>card-version-id</h3>
+<p>String UUID. The current version of the card.</p>
+<h3 id='member-id'>member-id</h3>
+<p>Int. A unique identifier for the currently logged in member.</p>
+<h3 id='page-type'>page-type</h3>
+<p>String. A short identifier for the current page. Standard values for some of the pages,</p>
+
+<ul>
+<li><code>home</code> for the home page</li>
+<li><code>story</code> for the story page</li>
+<li><code>section</code> for the various section and sub-section pages</li>
+<li><code>topic</code> for the various tag and topic pages</li>
+</ul>
+
+<p>For the remaining pages, any value can be provided.</p>
+<h3 id='social-media-type'>social-media-type</h3>
+<p>String. A tag to refer to the social media service. Ex <code>facebook</code>, <code>twitter</code>, <code>email</code>, <code>whatsapp</code>, <code>google_plusone_share</code>, <code>linkedin</code> etc</p>
+<h3 id='story-content-id'>story-content-id</h3>
+<p>String UUID. The id for the current story being displayed.</p>
+<h3 id='story-element-action'>story-element-action</h3>
+<p>String. The user interaction being tracked with a <a href="./stories-cards-and-elements">story element</a>. The value will depend on the element type and iteraction being recorded.</p>
+
+<ul>
+<li>For the <code>video</code> story element, action can be one of the following:
+
+<ul>
+<li><code>play</code> when the video starts playing or when playback is resumed</li>
+<li><code>pause</code> when the video playback has been paused</li>
+<li><code>complete</code> when the video has finished playing</li>
+</ul></li>
+</ul>
+<h3 id='story-element-id'>story-element-id</h3>
+<p>String UUID. The id for the story element.</p>
+<h3 id='story-element-type'>story-element-type</h3>
+<p>String. The type of the story element. Check the <a href="./stories-cards-and-elements">docs</a> for available types.</p>
+<h3 id='story-version-id'>story-version-id</h3>
+<p>String UUID. The current version of the story.</p>
+<h2 id='testing'>Testing</h2>
+<p>The snippet generates a tracking pixel for every api call made. This pixel is embedded in the DOM and deleted immediately after call succeeds. If the api calls are being made properly, then there should be entries for the resource named <code>event.gif</code> in the network tab of the browser&#39;s developer console. The request for this resource should have a <code>data</code> query parameter whose value should be the base64 encoded payload. Decode the data and verify the correct payload is being passed. The server will return a non 200 response if the payload is incorrect.</p>
+<h1 id='deployments-and-infrastructure'>Deployments and Infrastructure</h1><h2 id='default-urls'>Default URLs</h2>
+<p>The Quintype application is made up of at least 3 host names.</p>
+
+<ul>
+<li>The editor</li>
+<li>The API server</li>
+<li>The front end application</li>
+</ul>
+<h3 id='staging'>Staging</h3>
+<p>Staging urls are typically hosted by Quintype, and will have the following URLs.</p>
+
+<ul>
+<li>editor - <code>thefoobar.staging.quintype.com</code></li>
+<li>api server - <code>thefoobar.qtstage.io</code></li>
+<li>front end - <code>thefoobar-web.qtstage.io</code></li>
+</ul>
+<h3 id='production'>Production</h3>
+<p>Production urls typically have the editor and API server on the quintype domains, and the front end on the final domain</p>
+
+<ul>
+<li>editor - <code>thefoobar.quintype.com</code></li>
+<li>api server - <code>thefoobar.quintype.io</code> / <code>thefoobar.internal.quintype.io</code> (accessible within QCC)</li>
+<li>front end - <code>www.thefoobar.com</code> (this should be <code>next.thefoobar.com</code> before going live)</li>
+<li>beta front end - <code>beta.thefoobar.com</code></li>
+</ul>
+<h3 id='black-knight'>Black Knight</h3>
+<p>During the process of creating your account, the Quintype team will also create a publisher (The Foobar) on the <a href="#black-knight">Black Knight</a> application. You will be able to deploy all your front end applications from the same place.</p>
+<h3 id='production-dns-entries'>Production DNS Entries</h3><pre class="highlight plaintext"><code>www.thefoobar.com   CNAME thefoobar.publisher.quintype.io
+next.thefoobar.com  CNAME thefoobar.publisher.quintype.io
+beta.thefoobar.com  CNAME thefoobar.publisher.quintype.io
+thefoobar.com       A     174.129.25.170 # Redirect to www.thefoobar.com using http://wwwizer.com/naked-domain-redirect
+</code></pre>
+<p>The ON the right is an example for the DNS entries to be made</p>
+
+<p>We strongly recommend that you serve your content off a <code>www</code> domain, and use the apex to forward 301 to your www domain. However, do use a provider that sets a <code>Cache-Control</code> header with the redirect (like GoDaddy).</p>
+<pre class="highlight plaintext"><code># If you serve domain from an APEX domain
+thefoobar.com A 151.101.0.204
+thefoobar.com A 151.101.64.204
+thefoobar.com A 151.101.128.204
+thefoobar.com A 151.101.192.204
+</code></pre>
+<p>If your main site is on an APEX domain, then you must configure A records to our CDN.</p>
+<h3 id='ssl-https'>SSL / HTTPS</h3>
+<p>If your site requires SSL / HTTPS, contact us support@quintype.com</p>
+<h2 id='deploying-with-black-knight'>Deploying with Black Knight</h2>
+<p>The Black Knight application is a tool to deploy your front end code across the Quintype Client Cloud</p>
+<h3 id='overall-workflow'>Overall Workflow</h3>
+<p>The deployment process has three steps</p>
+<h3 id='compilation-steps'>Compilation Steps</h3>
+<ul>
+<li>Changes to the app are made locally, and pushed up to <a href="https://github.com">GitHub</a>.</li>
+<li><a href="https://hub.docker.com">Docker Hub</a> picks up the changes from GitHub, and builds a docker tag.</li>
+</ul>
+<h3 id='deployment-steps'>Deployment Steps</h3>
+<ul>
+<li>Enter the docker tag that is to be deployed. And click deploy.</li>
+<li>Black Knight will automatically <a href="#setting-up-configuration">copy in config files</a>, and create an &#39;immutable tag&#39;</li>
+<li>Black Knight will then deploy this &#39;immutable tag&#39; across the Quintype network.</li>
+</ul>
+<h3 id='setting-up-configuration'>Setting Up Configuration</h3>
+<p>Black Knight can be configure to copy in configuration files. These configuration files are per environment, and allow you to have different behavior across environments, and can be used for many use cases, such as</p>
+
+<ul>
+<li>Changing the API host on staging</li>
+<li>Config to disable SEO on beta / staging</li>
+<li>Changing secret keys</li>
+</ul>
+<h1 id='advanced-topics'>Advanced Topics</h1><h2 id='rss-feed'>RSS Feed</h2>
+<p>The stories RSS feed can be used to syndicate stories out from the CMS</p>
+<h3 id='end-point'>End point</h3>
+<ul>
+<li><code>/stories.rss</code> -&gt; end point for RSS feed</li>
+<li>This end point generates RSS feed for last four hours</li>
+</ul>
+<h3 id='supported-parameters'>Supported parameters</h3>
+<ol>
+<li><p>Parameter to fetch stories with different time durations</p>
+
+<ul>
+<li><code>/stories.rss?time-period=last-24-hours</code> -&gt; Fetches RSS feed with stories from last 24 hours</li>
+<li><code>/stories.rss?time-period=last-7-days</code> -&gt; Fetches RSS feed with stories from last 7 days</li>
+<li><code>/stories.rss?time-period=last-1-month</code> -&gt; Fetches RSS feed with stories from last 1 month</li>
+</ul></li>
+<li><p>Parameter to fetch stories by section slug</p>
+
+<ul>
+<li><strong>section slug</strong> can be obtained from <code>api/v1/config</code></li>
+<li><code>/stories.rss?section=section-slug</code> -&gt; Ex: <code>/stories.rss?section=sponsored-content</code> This end point
+fetches stories from <em>Sponsored Content</em> section.</li>
+</ul></li>
+<li><p>Parameter to fetch stories by section id(Preferable way to fetch stories by section)</p>
+
+<ul>
+<li><strong>section id</strong> can be obtained from <code>api/v1/config</code></li>
+<li><code>/stories.rss?section-id=id</code> -&gt; Ex: <code>/stories.rss?section-id=2809</code> This end point
+fetches stories from <em>Sponsored Content</em> section.</li>
+</ul></li>
+<li><p>Parameter to skip syndicated stories</p>
+
+<ul>
+<li><code>/stories.rss?skip=value</code> -&gt; This removes syndicated stories from a particular source; Example <code>/stories.rss?skip=bloomberg</code> on bloombergquint skips stories syndicated from bloomberg</li>
+<li><code>/stories.rss?skip=all</code> -&gt; This all value as parameter removes all syndicated stories</li>
+<li>This parameter supports comma separated values; Example <code>/stories.rss?skip=bloomberg,thequint</code> -&gt; This filters out stories syndicated from bloomberg, thequint on bloomberg quint</li>
+</ul></li>
+<li><p>Parameter to fetch stories from a sorter</p>
+
+<ul>
+<li><code>/stories.rss?story-group=story-group</code> -&gt; This fetches stories by sorter.</li>
+<li>The <strong>story group</strong> for any sorter can be obtained from <code>api/v1/config</code></li>
+<li>This doesn&#39;t have the time limit of 4 hours. This just pulls the stories from a sorter.</li>
+</ul></li>
+<li><p>Parameters to fetch stories by excluding stories from particular section(s).</p>
+
+<ul>
+<li><code>/stories.rss?exclude-section-ids=section-ids</code> -&gt; This fetches stories by excluding stories from section-id(s) lister; Example: <code>/stories.rss?exclude-section-ids=2435</code> this fetches stories and filters out stories(if there are any) with section id 2435.</li>
+<li><strong>section-ids</strong> can be obtained from <code>/api/v1/config</code></li>
+<li>this parameter supports multiple sections ids as comma separated values. This helps filtering out stories based on multiple sections</li>
+</ul></li>
+</ol>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

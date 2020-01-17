@@ -1,0 +1,331 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Getting Started with Quintype, Node, and React</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/javascripts/all.js"></script>
+  </head>
+
+  <body class="getting-started-with-node getting-started-with-node_index" data-languages="[&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="/images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="/images/logo.svg" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#chapter-1-setup" class="toc-h1 toc-link" data-title="Chapter 1 - Setup">Chapter 1 - Setup</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#prerequisites" class="toc-h2 toc-link" data-title="Chapter 1 - Setup">Prerequisites</a>
+                  </li>
+                  <li>
+                    <a href="#steps" class="toc-h2 toc-link" data-title="Chapter 1 - Setup">Steps</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#chapter-2-changing-the-header" class="toc-h1 toc-link" data-title="Chapter 2 - Changing the header">Chapter 2 - Changing the header</a>
+          </li>
+          <li>
+            <a href="#chapter-3-changing-the-look-of-a-page" class="toc-h1 toc-link" data-title="Chapter 3 - Changing the look of a page">Chapter 3 - Changing the look of a page</a>
+          </li>
+          <li>
+            <a href="#chapter-4-updating-the-data-for-a-page" class="toc-h1 toc-link" data-title="Chapter 4 - Updating the Data For A Page">Chapter 4 - Updating the Data For A Page</a>
+          </li>
+          <li>
+            <a href="#chapter-5-adding-a-new-layout-in-the-homepage-and-rendering-it-in-dev-mode" class="toc-h1 toc-link" data-title="Chapter 5 - Adding a new Layout in the homepage, and rendering it in dev mode">Chapter 5 - Adding a new Layout in the homepage, and rendering it in dev mode</a>
+          </li>
+          <li>
+            <a href="#chapter-6-deployments" class="toc-h1 toc-link" data-title="Chapter 6 - Deployments">Chapter 6 - Deployments</a>
+          </li>
+          <li>
+            <a href="#chapter-7-managing-the-editor" class="toc-h1 toc-link" data-title="Chapter 7 - Managing the Editor">Chapter 7 - Managing the Editor</a>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <p>This document is currently an outline</p>
+<h1 id='chapter-1-setup'>Chapter 1 - Setup</h1><h2 id='prerequisites'>Prerequisites</h2>
+<ul>
+<li>Install Node v8.11</li>
+<li>Understand React fundamentals.</li>
+<li>Understand Promises and async/await</li>
+<li>Install Visual Studio Code (optional)</li>
+<li>Install supervisor for dev server</li>
+</ul>
+<h2 id='steps'>Steps</h2>
+<ul>
+<li>Clone the malibu repo</li>
+<li>cd into the folder and do a ./run, which will install all dependencies and start server on port 3000</li>
+<li>Open localhost:3000 in the browser. You will see (screenshot)</li>
+</ul>
+<h1 id='chapter-2-changing-the-header'>Chapter 2 - Changing the header</h1>
+<p>Let&#39;s change the header to have a blue background</p>
+
+<ul>
+<li>Open <code>header/index.js</code> [cmd-p, header/index.js, enter]</li>
+<li>See the line with styleName=&quot;container&quot;, change that bit to styleName=&quot;container blue&quot; and hit save</li>
+<li>Go to the browser, and the header should have a blue background. Sometimes, this may need a refresh</li>
+<li>Go back to header/index.js. The styles for this component comes from the line <code>import &quot;./header.m.css&quot;</code>.</li>
+<li>Right click on the header, in the browser and look at the class on the div. It should look like this: <code>header-m__blue__1L_kP</code></li>
+<li>This is a CSS module. The classes in the header.m.css are only available to JS files that import it, via styleName. See babel react CSS modules for more info.</li>
+</ul>
+<h1 id='chapter-3-changing-the-look-of-a-page'>Chapter 3 - Changing the look of a page</h1>
+<ul>
+<li>Open up pick-component.js, and search for <code>PAGE_TYPE.HOME_PAGE</code>, and notice that the rendered component is called <code>HomePage</code></li>
+<li>You will see that the HomePage is defined in component-bundles/list.js. Open this file</li>
+<li>list.js will import the HomePage from components/pages/home.js. Press cmd - alt - down on HomePage</li>
+<li>You will see the definition for HomePage. It&#39;s pretty simple, has a header and calls out to a <code>LazyCollection</code> component.</li>
+<li>Let&#39;s try changing the title in the H1, and ensure it reflects in the browser.</li>
+<li>You&#39;ll see that data into the lazyCollection comes from props.data.collection. In the next chapter, we will explore how to update where this data comes from</li>
+</ul>
+<h1 id='chapter-4-updating-the-data-for-a-page'>Chapter 4 - Updating the Data For A Page</h1>
+<ul>
+<li>For a list of <code>PAGE_TYPES</code> defined, open up <code>constants.js</code></li>
+<li>Open up <code>load-data.js</code>, and look for <code>PAGE_TYPE.HOME_PAGE</code></li>
+<li>You can see that this comes from <code>loadHomePageData</code>, hover over the import and hit cmd-alt-down</li>
+<li>You&#39;ll see that <code>loadHomePageData</code> just calls <code>Collection.findBySlug</code>. The value returned from this async function will be available inside the component <code>HomePage</code> as <code>props.data</code>.</li>
+<li>Let&#39;s try loading a different collection, <code>home-dev</code>. Update the JS, and go to the browser. Do you see a different set of stories?</li>
+</ul>
+<h1 id='chapter-5-adding-a-new-layout-in-the-homepage-and-rendering-it-in-dev-mode'>Chapter 5 - Adding a new Layout in the homepage, and rendering it in dev mode</h1>
+<ul>
+<li>Let&#39;s look at what data we have in the home page, by putting a <code>console.log</code> after we get the collection <code>console.log(collection.asJson())</code></li>
+<li>Reload home page, then copy the json from your terminal, and paste it into http://jsonprettyprint.com</li>
+<li>The structure should look something like this (snippet showing collection template with FourColGrid)</li>
+<li>Open collection-templates/index.js, here you can see a template</li>
+<li>Copy four-col-grid to my-grid. Write component, add to this, and set it as default</li>
+<li>Reload Page</li>
+<li>We will explain how to add your <code>my-grid</code> component to the API in chapter 7</li>
+</ul>
+<h1 id='chapter-6-deployments'>Chapter 6 - Deployments</h1>
+<ul>
+<li>Black Knight basicss</li>
+<li>Talk to the team</li>
+</ul>
+<h1 id='chapter-7-managing-the-editor'>Chapter 7 - Managing the Editor</h1>
+<ul>
+<li>Link to collections and Manage collection in the help documentation</li>
+<li>Explanation of /template-options.json</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

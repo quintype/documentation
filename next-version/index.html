@@ -1,0 +1,2161 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/javascripts/all.js"></script>
+  </head>
+
+  <body class="next-version next-version_index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="/images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="/images/logo.svg" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction-to-quintype-apis" class="toc-h1 toc-link" data-title="Introduction to Quintype APIs">Introduction to Quintype APIs</a>
+          </li>
+          <li>
+            <a href="#api-name" class="toc-h1 toc-link" data-title="API name">API name</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#api-v1-search" class="toc-h2 toc-link" data-title="API name">/api/v1/search</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-stories" class="toc-h2 toc-link" data-title="API name">/api/v1/stories</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-stories-by-slug" class="toc-h2 toc-link" data-title="API name">/api/v1/stories-by-slug</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-stories-story-id" class="toc-h2 toc-link" data-title="API name">/api/v1/stories/{story-id}</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-stories-story-id-related-stories" class="toc-h2 toc-link" data-title="API name">/api/v1/stories/{story-id}/related-stories</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-bulk" class="toc-h2 toc-link" data-title="API name">/api/v1/bulk</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-collections-slug" class="toc-h2 toc-link" data-title="API name">/api/v1/collections/{slug}</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-authors" class="toc-h2 toc-link" data-title="API name">/api/v1/authors</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-authors-author-id" class="toc-h2 toc-link" data-title="API name">/api/v1/authors/{author-id}</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-breaking-news" class="toc-h2 toc-link" data-title="API name">/api/v1/breaking-news</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-config" class="toc-h2 toc-link" data-title="API name">/api/v1/config</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-entities" class="toc-h2 toc-link" data-title="API name">/api/v1/entities</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-entities-id" class="toc-h2 toc-link" data-title="API name">/api/v1/entities/{id}</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-entities-id-subentity" class="toc-h2 toc-link" data-title="API name">/api/v1/entities/{id}/{subentity+}</a>
+                  </li>
+                  <li>
+                    <a href="#api-stories-story-id-votes" class="toc-h2 toc-link" data-title="API name">/api/stories/{story-id}/votes</a>
+                  </li>
+                  <li>
+                    <a href="#api-stories-story-id-votes-2" class="toc-h2 toc-link" data-title="API name">/api/stories/{story-id}/votes</a>
+                  </li>
+                  <li>
+                    <a href="#stories-rss" class="toc-h2 toc-link" data-title="API name">/stories.rss</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-tags-slug" class="toc-h2 toc-link" data-title="API name">/api/v1/tags/{slug}</a>
+                  </li>
+                  <li>
+                    <a href="#api-member-metadata" class="toc-h2 toc-link" data-title="API name">/api/member/metadata</a>
+                  </li>
+                  <li>
+                    <a href="#api-member-metadata-2" class="toc-h2 toc-link" data-title="API name">/api/member/metadata</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-members-me" class="toc-h2 toc-link" data-title="API name">/api/v1/members/me</a>
+                  </li>
+                  <li>
+                    <a href="#api-member-forgot-password" class="toc-h2 toc-link" data-title="API name">/api/member/forgot-password</a>
+                  </li>
+                  <li>
+                    <a href="#api-member" class="toc-h2 toc-link" data-title="API name">/api/member</a>
+                  </li>
+                  <li>
+                    <a href="#api-member-login" class="toc-h2 toc-link" data-title="API name">/api/member/login</a>
+                  </li>
+                  <li>
+                    <a href="#api-instant-articles-rss" class="toc-h2 toc-link" data-title="API name">/api/instant-articles.rss</a>
+                  </li>
+                  <li>
+                    <a href="#api-v1-amp-story" class="toc-h2 toc-link" data-title="API name">/api/v1/amp/story/</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction-to-quintype-apis'>Introduction to Quintype APIs</h1><h1 id='api-name'>API name</h1><h2 id='api-v1-search'>/api/v1/search</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/search?fields=headline%2C%20tags%2Cslug%2C%20last-published-at%2C&amp;limit=5&amp;q=Indian%20cricket" -H "Accept: application/json"
+
+
+Example Response
+
+{  
+   "results":{  
+      "from":0,
+      "size":5,
+      "total":45,
+      "stories":[  
+         {  
+            "headline":"L&amp;T to build world's biggest cricket stadium at Motera",
+            "tags":[  
+               {  
+                  "id":275035,
+                  "name":"National",
+                  "slug":"national"
+               }
+            ],
+            "slug":"national/2016/12/09/storystadiumabc",
+            "last-published-at":1482220906320
+         },
+         {  
+            "headline":"When is Tesla entering the Indian market?",
+            "tags":[  
+               {  
+                  "id":331448,
+                  "name":"Tesla",
+                  "slug":"tesla"
+               }
+            ],
+            "slug":"technology/2017/02/23/When-is-Tesla-entering-the-Indian-market",
+            "last-published-at":1487840302541
+         },
+         {  
+            "headline":"9/11 and the unsolvable Afghan drama",
+            "tags":[  
+               {  
+                  "id":17518,
+                  "name":"Dhoni",
+                  "meta-description":null,
+                  "slug":"dhoni"
+               },
+               {  
+                  "id":505844,
+                  "name":"indiabq",
+                  "meta-description":null,
+                  "slug":"indiabq"
+               }
+            ],
+            "slug":"politics/2017/09/13/afghan-drama",
+            "last-published-at":1505284207024
+         },
+      ],
+      "term":"Indian cricket"
+   }
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns a list of stories.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>string</td>
+<td>The search string</td>
+</tr>
+<tr>
+<td>author</td>
+<td>string</td>
+<td>The author name</td>
+</tr>
+<tr>
+<td>author-id</td>
+<td>integer</td>
+<td>The author ID</td>
+</tr>
+<tr>
+<td>fields</td>
+<td>string</td>
+<td>The parameters of a story, such as headline, slug, section, author ID, story ID, and so on.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>integer</td>
+<td>The number of stories to display. The default is 20.</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>integer</td>
+<td>The distance from the start of the array of stories to the reference point in the array.</td>
+</tr>
+<tr>
+<td>sort</td>
+<td>string</td>
+<td>Returns stories based on ascending or descending order</td>
+</tr>
+<tr>
+<td>published-before</td>
+<td>integer</td>
+<td>The date in Epoch format</td>
+</tr>
+<tr>
+<td>published-after</td>
+<td>integer</td>
+<td>The date in Epoch format</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-stories'>/api/v1/stories</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/stories?limit=2  -H "Accept: application/json"
+
+Example Response
+
+{  
+   "stories":[  
+      {  
+         "author-name":"Michele Mag",
+         "headline":"Dangal reviews: Aamir Khan gets a salute from all of Bollywood",
+         "slug":"entertainment/2016/12/23/storyabcphoto",
+         "last-published-at":1504268716413,
+         "sections":[  
+            {  
+               "id":81,
+               "name":"Entertainment",
+               "display-name":"Entertainment",
+               "slug":"entertainment",
+               "collection":null
+            }
+         ],
+         "hero-image-metadata":{  
+            "width":640,
+            "height":480,
+            "mime-type":"image/jpeg",
+            "focus-point":[  
+               326,
+               240
+            ]
+         },
+         "published-at":1504268716413,
+         "id":"01436fae-fb15-42e5-9b3b-e57b93de21f0",
+         "author-id":5278,
+         "first-published-at":1482482240320,
+         "story-template":"photo",
+         "metadata":{  
+            "card-share":{  
+               "shareable":true
+            }
+         }
+      },
+      {  
+         "author-name":"Sriram K",
+         "headline":"9/11 and the unsolvable Afghan drama",
+         "slug":"politics/2017/09/13/afghan-drama",
+         "last-published-at":1505284207024,
+         "sections":[  
+            {  
+               "id":83,
+               "name":"Politics",
+               "display-name":null,
+               "slug":"politics",
+               "parent-id":null,
+               "collection":{  
+                  "id":4364,
+                  "name":"The Quint",
+                  "slug":"the-quint"
+               }
+            },
+            {  
+               "id":98,
+               "name":"Current Affairs",
+               "display-name":null,
+               "slug":"current-affairs",
+               "parent-id":null,
+               "collection":null
+            }
+         ],
+         "hero-image-metadata":{  
+            "width":5120,
+            "height":3620,
+            "focus-point":[  
+               3977,
+               737
+            ]
+         },
+         "published-at":1505284207024,
+         "id":"8339b599-3eab-4428-9486-9139d28bb1ba",
+         "author-id":61657,
+         "first-published-at":1505284207024,
+         "story-template":null,
+         "metadata":{  
+            "card-share":{  
+               "shareable":true
+            }
+         }
+      }
+   ]
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns a list of stories and the story details, such as the author name and author ID, story headline, story slug, the list of sections ID and section name that the story belongs to, story template, metadata, and so on.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>section-id</td>
+<td>integer</td>
+<td>The section ID of a story</td>
+</tr>
+<tr>
+<td>section</td>
+<td>string</td>
+<td>The name of a section</td>
+</tr>
+<tr>
+<td>fields</td>
+<td>string</td>
+<td>The parameters of a story, such as headline, slug, section, author ID, story ID, and so on.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>integer</td>
+<td>The number of stories to display. The default is 20.</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>integer</td>
+<td>The distance from the start of the array of stories to the reference point in the array.</td>
+</tr>
+<tr>
+<td>story-order</td>
+<td>string</td>
+<td>Displays stories in the specified order, such as top, last-updated, and so on.</td>
+</tr>
+<tr>
+<td>template</td>
+<td>string</td>
+<td>The name of the story template. For example, video, live-blog, photo-story, and so on.</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>string</td>
+<td>The name of the tags.</td>
+</tr>
+<tr>
+<td>randomize</td>
+<td>string</td>
+<td>Displays list of random stories.</td>
+</tr>
+<tr>
+<td>not-story-content-ids</td>
+<td>string</td>
+<td>The stories other than the mentioned story IDs.</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-stories-by-slug'>/api/v1/stories-by-slug</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "https://sketches.quintype.com/api/v1/stories-by-slug?slug=technology/2017/09/14/iphone-x-vs-samsung-galaxy-note-8"  -H "Accept: application/json"
+
+Example Response
+
+{  
+   "story":{  
+      "seo":{  
+         "meta-description":"comparison between iphone X and galaxy s8",
+         "meta-title":"smartphone, apple vs samsung",
+         "meta-keywords":[  
+            "politics"
+         ],
+         "meta-google-news-standout":false,
+      },
+      "assignee-id":323432,
+      "author-name":"Vineet",
+      "tags":[  
+         {  
+            "id":257701,
+            "name":"iphone;",
+            "meta-description":null,
+            "slug":"iphone"
+         },
+         {  
+            "id":506781,
+            "name":"smartphone",
+            "meta-description":null,
+            "slug":"smartphone"
+         }
+      ],
+      "headline":"iPhone X vs Samsung Galaxy Note 8",
+      "storyline-id":null,
+      "votes":{},
+      "story-content-id":"ef91900e-2a7d-42c6-8ccc-fb75db2a4504",
+      "slug":"technology/2017/09/14/iphone-x-vs-samsung-galaxy-note-8",
+      "last-published-at":1512732026172,
+      "subheadline":"A battle for smartphone dominance",
+      "sections":[  
+         {  
+            "id":84,
+            "name":"Technology",
+            "display-name":null,
+            "slug":"technology",
+            "parent-id":null,
+            "collection":null
+         }
+      ],
+      "content-created-at":1505383805868,
+      "owner-name":"Vineet"      
+      "publisher-id":15,
+      "hero-image-metadata":{  
+         "width":616,
+         "height":347,
+         "mime-type":"image/jpeg",
+         "focus-point":[  
+            408,
+            232
+         ]
+      },
+      "published-at":1512732026172,
+      "is-live-blog":false,
+      "breaking-news-linked-story-id":null,
+      "summary":"Iphone vs Samsung",
+      "status":"published",
+      "bullet-type":"123",
+      "id":"ef91900e-2a7d-42c6-8ccc-fb75db2a4504",
+      "hero-image-s3-key":"quintype-demo/2016-11/20d960e9-cbb4-46c0-a6cc-3819c326f766/pixelxl-iphone7plus-30.jpg",
+      "cards":[  
+         {  
+            "story-elements":[  
+               {  
+                  "description":"",
+                  "page-url":"/story/ef91900e-2a7d-42c6-8ccc-fb75db2a4504/element/690b7304-d875-484a-9850-33c9eb360537",
+                  "type":"youtube-video",
+                  "url":"https://www.youtube.com/watch?v=iGpVs3wFKF0#action=share",
+                  "embed-url":"https://www.youtube.com/embed/iGpVs3wFKF0#action=share",
+                  "metadata":{  
+
+                  },
+               {   
+                  "page-url":"/story/ef91900e-2a7d-42c6-8ccc-fb75db2a4504/element/f693466d-2c8f-49fa-9d10-d26ff4f05ae3",
+                  "type":"jsembed",
+                  "metadata":{  
+                     "tweet-url":"https://twitter.com/Apple/status/907700942715228160",
+                     "provider":"twitter",
+                     "tweet-id":"907700942715228160"
+                  },
+                  "subtype":"tweet"
+               }
+            ],
+            "status":"draft",
+            "id":"afce3ef4-1036-4c1f-9d0e-997cde4dda4d",
+            "content-id":"afce3ef4-1036-4c1f-9d0e-997cde4dda4d",
+            "version":4,
+         },
+         {  
+            "story-elements":[  
+               {  
+                  "description":"",
+                  "page-url":"/story/ef91900e-2a7d-42c6-8ccc-fb75db2a4504/element/a99de097-11b7-4de6-8c22-6ef5ea2f03c1",
+                  "type":"jsembed",
+                  "family-id":"7b056ac4-c226-4650-99a9-0b11ed354335",
+                  "title":"",
+                  "id":"a99de097-11b7-4de6-8c22-6ef5ea2f03c1",
+
+               },
+               {  
+                  "description":"",
+                  "page-url":"/story/ef91900e-2a7d-42c6-8ccc-fb75db2a4504/element/c5b14bcd-4be2-46d9-9f46-43ea4e6bd3ac",
+                  "type":"jsembed",
+               },
+               "subtype":"location"
+            }
+         ],
+         "status":"draft",
+         "id":"6e14e3ed-529f-4d53-a290-175691c955b2",
+         "content-id":"6e14e3ed-529f-4d53-a290-175691c955b2",
+         "version":2,
+         "metadata":{  
+            "social-share":{  
+               "shareable":true,
+               "title":"iPhone X vs Samsung Galaxy Note 8",
+               "message":"Iphone vs Samsung",
+
+            }
+         }
+      }
+   ],
+   "story-version-id":"f8526a61-6264-4dca-a12b-0ca1d067ede2",
+   "content-type":"story",
+   "author-id":323432,
+   "owner-id":323432,
+   "version":16,
+   "story-template":"video",
+   "authors":[  
+      {  
+         "id":323432,
+         "name":"Vineet",
+         "slug":"vineet",
+
+      }
+   ],
+   "metadata":{  
+      "card-share":{  
+         "shareable":true
+      }
+   },
+
+}
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the story having the mentioned slug. The output contains information such as the story author name, author ID, tags, sections, cards, and the metadata associated with that story.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>slug</td>
+<td>string</td>
+<td>The slug for the desired story</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-stories-story-id'>/api/v1/stories/{story-id}</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/stories/ef91900e-2a7d-42c6-8ccc-fb75db2a4504"  -H "Accept: application/json"
+
+Example Response
+
+{  
+   "story":{  
+      "updated-at":1505384172777,
+      "seo":{  
+         "meta-description":"comparison between iphone X and galaxy s8",
+         "meta-title":"smartphone, apple vs samsung",
+         "meta-keywords":[  
+
+         ],
+         "meta-google-news-standout":false,
+         "claim-reviews":{  
+            "story":null
+         }
+      },
+      "assignee-id":323432,
+      "author-name":"Vineet",
+      "tags":[  
+         {  
+            "id":257701,
+            "name":"iphone;",
+            "meta-description":null,
+            "slug":"iphone"
+         },
+         {  
+            "id":506781,
+            "name":"smartphone",
+            "meta-description":null,
+            "slug":"smartphone"
+         }
+      ],
+      "headline":"iPhone X vs Samsung Galaxy Note 8",
+      "storyline-id":null,
+      "votes":{  
+
+      },
+      "story-content-id":"ef91900e-2a7d-42c6-8ccc-fb75db2a4504",
+      "slug":"technology/2017/09/14/iphone-x-vs-samsung-galaxy-note-8",
+      "last-published-at":1505384184330,
+      "subheadline":"A battle for smartphone dominance",
+      "alternative":{  
+
+      },
+      "sections":[  
+         {  
+            "id":84,
+            "name":"Technology",
+            "display-name":null,
+            "slug":"technology",
+            "parent-id":null,
+            "collection":null
+         }
+      ],
+      "content-created-at":1505383805868,
+      "owner-name":"Vineet Panjabi",
+      "custom-slug":null,
+      "push-notification":null,
+      "publisher-id":15,
+      "hero-image-metadata":{  
+         "width":616,
+         "height":347,
+         "mime-type":"image/jpeg",
+         "focus-point":[  
+            418,
+            169
+         ]
+      },
+      "comments":null,
+      "entities":{  
+
+      },
+      "published-at":1505384184330,
+      "breaking-news-linked-story-id":null,
+      "storyline-title":null,
+      "summary":"Iphone vs Samsung",
+      "canonical-url":null,
+      "autotags":[  
+
+      ],
+      "linked-entities":[  
+
+      ],
+      "status":"published",
+      "hero-image-attribution":null,
+      "bullet-type":"123",
+      "id":"ef91900e-2a7d-42c6-8ccc-fb75db2a4504",
+      "hero-image-s3-key":"quintype-demo/2016-11/20d960e9-cbb4-46c0-a6cc-3819c326f766/pixelxl-iphone7plus-30.jpg",
+      "cards":[  
+         {  
+            "story-elements":[  
+               {  
+                  "description":"",
+                  "page-url":"/story/ef91900e-2a7d-42c6-8ccc-fb75db2a4504/element/690b7304-d875-484a-9850-33c9eb360537",
+                  "type":"youtube-video",
+                  "family-id":"7267f6e8-808c-455b-81aa-6bd0dd8c7ad5",
+                  "title":"",
+                  "id":"690b7304-d875-484a-9850-33c9eb360537",
+               },
+            ],
+            "card-updated-at":1505384055361,
+            "content-version-id":"6445d74d-1079-4244-a5a1-5b8403cf88cc",
+            "card-added-at":1505383805931,
+            "status":"draft",
+            "id":"afce3ef4-1036-4c1f-9d0e-997cde4dda4d",
+            "content-id":"afce3ef4-1036-4c1f-9d0e-997cde4dda4d",
+            "version":3,
+            "metadata":{  
+               "social-share":{  
+                  "shareable":true,
+                  "title":"iPhone X vs Samsung Galaxy Note 8",
+                  "message":"Iphone vs Samsung",
+                  "image":{  
+                     "key":"pixelxl-iphone7plus-30.jpg",
+                     "url":null,
+                     "attribution":null,
+                     "caption":"Best in class.",
+                     "metadata":{  
+                        "width":616,
+                        "height":347,
+                        "mime-type":"image/jpeg",
+                        "focus-point":[  
+                           418,
+                           169
+                        ]
+                     }
+                  }
+               }
+            }
+         }
+      ],
+      "story-version-id":"1603c682-699e-48ea-9354-7e265ca7c1f8",
+      "content-type":"story",
+      "content-updated-at":1509011137120,
+      "author-id":323432,
+      "owner-id":323432,
+      "access":null,
+      "first-published-at":1505384184330,
+      "hero-image-caption":"Best in class.",
+      "version":4,
+      "story-template":"video",
+      "sequence-no":null,
+      "created-at":1505384127930,
+      "authors":null,
+      "metadata":{  
+         "card-share":{  
+            "shareable":true
+         }
+      },
+      "publish-at":null,
+      "assignee-name":"Vineet
+   }
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the story details having the mentioned story ID.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>story-id</td>
+<td>UUID</td>
+<td>The story ID</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-stories-story-id-related-stories'>/api/v1/stories/{story-id}/related-stories</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/stories/db09a326-3af2-4286-a92b-8ffbc9bb3c4f/related-stories?fields=headline,id,slug,author-name"  -H "Accept: application/json"
+
+Example Response
+{  
+   "related-stories":[  
+      {  
+         "headline":"Okuhara reigns at Glasgow",
+         "id":"496b653b-cb45-4843-9f1d-273b7a81900b",
+         "slug":"sports/2017/08/30/okuhara-reigns-at-glasgow",
+         "author-name":"Tapan"
+      },ff
+      {  
+         "headline":"iPhone X vs Samsung Galaxy Note 8",
+         "id":"ef91900e-2a7d-42c6-8ccc-fb75db2a4504",
+         "slug":"technology/2017/09/14/iphone-x-vs-samsung-galaxy-note-8",
+         "author-name":"Vineet"
+      },
+      {  
+         "headline":"9/11 and the unsolvable Afghan drama",
+         "id":"8339b599-3eab-4428-9486-9139d28bb1ba",
+         "slug":"politics/2017/09/13/afghan-drama",
+         "author-name":"Sriram"
+      }
+   ]
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the stories that are related to the mentioned story ID.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>story-id</td>
+<td>UUID</td>
+<td>The story ID</td>
+</tr>
+<tr>
+<td>section-id</td>
+<td>string</td>
+<td>The section ID of a story</td>
+</tr>
+<tr>
+<td>fields</td>
+<td>string</td>
+<td>The parameters of a story, such as headline, slug, sections, author ID, and so on.</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-bulk'>/api/v1/bulk</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl 'http://sketches.quintype.com/api/v1/bulk' -H 'Content-Type: application/json' --data-binary '{"requests":{"sports":{"slug":"sports","limit":"4","_type":"collection"},"history":{"slug":"history","limit":"4","_type":"collection"}}}' --compressed;
+
+Example Response
+
+{  
+   "results":{  
+      "sports":{  
+         "updated-at":1507616006917,
+         "slug":"sports",
+         "name":"Sports",
+         "automated":false,
+         "template":"default",
+         "rules":{  
+
+         },
+         "summary":"Sports",
+         "id":7595,
+         "total-count":1,
+         "items":[  
+            {  
+               "id":7595,
+               "type":"collection",
+               "name":"Sports Main",
+               "slug":"sports-main",
+               "template":"default"
+            }
+         ],
+      },
+      "history":{  
+         "updated-at":1506933499956,
+         "slug":"history",
+         "name":"History ",
+         "automated":false,
+         "template":"default",
+         "rules":{  
+            "content-type":"story",
+            "collection-id":7585
+         },
+         "summary":"History ",
+         "id":7587,
+         "total-count":1,
+         "items":[  
+            {  
+               "id":7585,
+               "type":"collection",
+               "name":"History Main",
+               "slug":"history-main",
+               "template":"default"
+            }
+         ],
+      }
+   }
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns multiple responses in a single API request.</p>
+<h2 id='api-v1-collections-slug'>/api/v1/collections/{slug}</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/collections/featured-stories"  -H "Accept: application/json"
+
+Example Response
+
+{
+   "updated-at": 1506933499956,
+   "slug": "history-trails",
+   "name": "History Trails",
+   "automated": false,
+   "template": "default",
+   "rules": {
+      "content-type": "story",
+      "collection-id": 7587
+   },
+   "summary": "History Trails",
+   "id": 7587,
+   "total-count": 1,
+   "items": [
+      {
+         "id": 7584,
+         "type": "collection",
+         "name": "History Trails Main",
+         "slug": "history-trails-main",
+         "template": "default"
+      }
+   ],
+   "created-at": 1493208539891,
+   "metadata": {
+   "cover-image": {}
+   }
+}
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the collection based on the slug.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>slug</td>
+<td>string</td>
+<td>The slug for the desired collection</td>
+</tr>
+<tr>
+<td>item-type</td>
+<td>string</td>
+<td>Possible values are story and collection</td>
+</tr>
+<tr>
+<td>exclude-story-ids</td>
+<td>integer</td>
+<td>The story IDs to be excluded from displaying</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-authors'>/api/v1/authors</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/authors" -H "Accept: application/json"
+
+Example Response
+
+{  
+   "limit":4,
+   "offset":0,
+   "total":67
+},
+"authors":[  
+   {  
+      "id":2038,
+      "name":"Dinjas,
+      "avatar-url":"https://lh3.googleusercontent.com/-XdUIqdMkCWA/4252rscbv5M/photo.jpg?sz=50",
+      "avatar-s3-key":null,
+      "twitter-handle":null,
+      "bio":null,
+      "metadata":{  
+
+      },
+      "slug":"dinjas"
+   },
+   {  
+      "id":2039,
+      "name":"Ramit",
+      "avatar-url":"https://lh5.googleusercontent.com/-nXlfvt-YsVw/uo5Y2_mFdWc/photo.jpg?sz=50",
+      "avatar-s3-key":null,
+      "twitter-handle":null,
+      "bio":null,
+      "metadata":{  
+
+      },
+      "slug":"ramit"
+   },
+   {  
+      "id":2040,
+      "name":"Villackal",
+      "avatar-url":null,
+      "avatar-s3-key":null,
+      "twitter-handle":null,
+      "bio":null,
+      "metadata":{  
+
+      },
+      "slug":"villackal"
+   },
+   {  
+      "id":2041,
+      "name":"Tapan",
+      "avatar-url":null,
+      "avatar-s3-key":null,
+      "twitter-handle":null,
+      "bio":null,
+      "metadata":{  
+
+      },
+      "slug":"tapan"
+   }
+]
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the list of authors with the author name and author ID, along with details such as the author&#39;s biodata, gender, twitter handle and so on.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<p>None.</p>
+<h2 id='api-v1-authors-author-id'>/api/v1/authors/{author-id}</h2><pre class="highlight plaintext"><code>
+Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/authors/20294 -H "Accept: application/json"
+
+Example Response
+{  
+   "author":{  
+      "id":20294,
+      "name":"Abhishek Sharma",
+      "slug":"abhishek-sharma",
+      "avatar-s3-key":null,
+      "twitter-handle":null,
+      "bio":null,
+      "metadata":{  
+
+      }
+   }
+}
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the author details with the specified author ID.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>author-id</td>
+<td>integer</td>
+<td>The author ID</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-breaking-news'>/api/v1/breaking-news</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/breaking-news" -H "Accept: application/json"
+
+Example Response
+
+{
+  "stories": [
+    {
+      "author-name": "Pragati Saxena",
+      "headline": "7 killed in Kabul suicide bombing  ",
+      "slug": "{{section}}/{{slug}}",
+      "last-published-at": 1510830370210,
+      "alternative": {},
+      "sections": [],
+      "hero-image-metadata": null,
+      "published-at": 1510830370210,
+      "id": "f3932791-c827-4e88-be67-6e9af6505e3c",
+      "hero-image-s3-key": null,
+      "author-id": 117631,
+      "first-published-at": 1510830370210,
+      "story-template": "breaking-news",
+      "metadata": {
+        "card-share": {
+          "shareable": false
+        }
+    },
+      "author-name": "Pragati Saxena",
+      "headline": "Notorious cult leader Charles Manson dead  ",
+      "slug": "{{section}}/{{slug}}",
+      "last-published-at": 1511164690641,
+      "alternative": {},
+      "sections": [],
+      "hero-image-metadata": null,
+      "published-at": 1511164690641,
+      "id": "83b5d292-31ae-452f-98e7-5d7b05a06f2a",
+      "hero-image-s3-key": null,
+      "author-id": 117631,
+      "first-published-at": 1511164690641,
+      "story-template": "breaking-news",
+      "metadata": {
+        "card-share": {
+         "shareable": false
+       }
+    }
+  ]
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the list of breaking news.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<p>None.</p>
+<h2 id='api-v1-config'>/api/v1/config</h2>
+<p><strong>Description</strong></p>
+
+<p>Displays the publisher&#39;s configurations, such as the publisher name and ID, SEO metadata, the sections and menu items, and so on.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<p>None.</p>
+<h2 id='api-v1-entities'>/api/v1/entities</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/entities?limit=2&amp;type=book" -H "Accept: application/json"
+
+
+Example Response
+
+{  
+   "entities":[  
+      {  
+         "updated-at":1494924456440,
+         "publisher-id":15,
+         "name":"Five Point Someone",
+         "type":"book",
+         "entity-type-id":1,
+         "deleted-at":null,
+         "created-by":61657,
+         "id":12,
+         "last-updated-by":61657,
+         "created-at":1494924456440
+      },
+      {  
+         "updated-at":1494921231049,
+         "publisher-id":15,
+         "name":"The Old Man and the Sea",
+         "type":"book",
+         "entity-type-id":1,
+         "deleted-at":null,
+         "created-by":94890,
+         "last-updated-by":94890,
+         "created-at":1494921231049
+      }
+   ],
+   "total":7
+}
+
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Lists all entities.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>string</td>
+<td>The search string, for example</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>integer</td>
+<td>The number of stories to display. The default is 20.</td>
+</tr>
+<tr>
+<td>offset</td>
+<td>integer</td>
+<td>The distance from the start of the array of entities to the reference point in the array.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>The ID of an entity</td>
+</tr>
+<tr>
+<td>ids</td>
+<td>string</td>
+<td>A list of entity IDs</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-entities-id'>/api/v1/entities/{id}</h2><pre class="highlight plaintext"><code>
+Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/entities/12" -H "Accept: application/json"
+
+
+Example Response
+{  
+   "entity":{  
+      "updated-at":1494924456440,
+      "publisher-id":15,
+      "name":"Five Point Someone",
+      "type":"book",
+      "entity-type-id":1,
+      "deleted-at":null,
+      "created-by":61657,
+      "id":12,
+      "last-updated-by":61657,
+      "created-at":1494924456440
+   }
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Lists the entity having the specified ID.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>integer</td>
+<td>The entity ID</td>
+</tr>
+</tbody></table>
+<h2 id='api-v1-entities-id-subentity'>/api/v1/entities/{id}/{subentity+}</h2><pre class="highlight plaintext"><code>
+The following request fetches the list of companies established in the year 2015. A relationship had been created between the entities (entity-type) `year` and `companies`. 
+
+Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/entities/15557/companies-established-year" -H "Accept: application/json"
+
+Example Response
+
+{
+   "relationships": {
+      "self": [
+         {
+            "entity-type": "year",
+            "name": "2015",
+            "rank": 1,
+            "relationship": "self",
+            "deleted-at": null,
+            "created-by": 232469,
+            "id": 15557,
+            "last-updated-by": 232469,
+            "created-at": 1498647361780
+         }
+      ],
+      "companies-year": [
+         {
+            "entity-type": "companies-established",
+            "name": "The companies established in 2015",
+            "rank": 2,
+            "relationship": "companies-established-year",
+            "id": 21697,
+            "companies-established-year": [
+               ....  // A list of companies established in 2015
+            ],
+            "companies-established-year": {
+               "id": 15557,
+               "name": "2015"
+            },
+         "last-updated-by": 232469,
+         "created-at": 1498648880350,
+         }
+      ]
+   }
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Lists the subentity details in relation to the entity ID.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>integer</td>
+<td>The entity ID</td>
+</tr>
+<tr>
+<td>subentity</td>
+<td>string</td>
+<td>A nested entity name</td>
+</tr>
+</tbody></table>
+<h2 id='api-stories-story-id-votes'>/api/stories/{story-id}/votes</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl 'http://sketches.quintype.com/api/stories/8f9538f2-1972-4c7a-b1eb-7f8942dd0606/votes' -H 'Content-Type: application/json' --data-binary '{'magnitude': 'yes'}';
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Adds vote to the specified story. Note that the user has to be logged in.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>story-id</td>
+<td>UUID</td>
+<td>The story ID</td>
+</tr>
+</tbody></table>
+<h2 id='api-stories-story-id-votes-2'>/api/stories/{story-id}/votes</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/stories/ef91900e-2a7d-42c6-8ccc-fb75db2a4504/votes" -H "Accept: application/json"
+
+
+Example Response
+
+
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Fetches the total number of votes for the specified ID. Note that the user has to be logged in.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>story-id</td>
+<td>UUID</td>
+<td>The story ID</td>
+</tr>
+</tbody></table>
+<h2 id='stories-rss'>/stories.rss</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/stories.rss" -H "Accept: application/json"
+
+Example Response
+
+&lt;rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"&gt;
+    &lt;channel&gt; 
+        &lt;title&gt;Platform&lt;/title&gt; 
+        &lt;description&gt;Platform&lt;/description&gt; 
+        &lt;atom:link href="http://sketches.quintype.com/stories.rss?time-period=last-1-month" rel="self" type="application/rss+xml"&gt;&lt;/atom:link&gt; 
+        &lt;language&gt;en-US&lt;/language&gt; 
+        &lt;lastBuildDate&gt;Tue,
+19Dec 2017 04:40:45+0000&lt;/lastBuildDate&gt; 
+        &lt;sy:updatePeriod&gt;hourly&lt;/sy:updatePeriod&gt; 
+        &lt;sy:updateFrequency&gt;1&lt;/sy:updateFrequency&gt; 
+        &lt;item&gt; 
+    &lt;title&gt;Indian opener Rohit Sharma’s record-setting third career double hundred.&lt;/title&gt; 
+    &lt;link&gt;http://www.southmagnews.com/2017/12/18/indian-opener-rohit-sharmas-record-setting-third-career-double-hundred&lt;/link&gt; 
+    &lt;comments&gt;http://www.southmagnews.com/2017/12/18/indian-opener-rohit-sharmas-record-setting-third-career-double-hundred#comments&lt;/comments&gt; 
+    &lt;atom:updated&gt;2017-12-18T11:31:48.852Z&lt;/atom:updated&gt; 
+    &lt;category&gt;cricket&lt;/category&gt; 
+    &lt;content:encoded&gt; 
+        &lt;![  
+      CDATA   [  
+      &lt;p&gt;Indian opener Rohit Sharma’s record-setting third career double hundred.&lt;/p&gt;
+   ]
+]&gt; 
+    &lt;/content:encoded&gt; 
+&lt;/item&gt; 
+&lt;item&gt; 
+&lt;title&gt; 
+GST Network Brings In Option For Filing Of Forms On Monthly Or Quarterly Basis 
+&lt;/title&gt; 
+&lt;link&gt; 
+https://magzinenew.com/insta/gst-network-brings-in-option-for-filing-of-forms-on-monthly-or-quarterly-basis 
+&lt;/link&gt; 
+&lt;comments&gt; 
+https://magzinenew.com/insta/gst-network-brings-in-option-for-filing-of-forms-on-monthly-or-quarterly-basis#comments 
+&lt;/comments&gt; 
+&lt;guid isPermaLink="false"&gt;20a996a0-80ba-4bed-b961-a3d5064bff40&lt;/guid&gt; 
+&lt;atom:updated&gt;2017-12-19T03:13:36.812Z&lt;/atom:updated&gt; 
+&lt;atom:author&gt; 
+&lt;atom:name&gt;Staff&lt;/atom:name&gt; 
+&lt;atom:uri&gt;/api/author/17513&lt;/atom:uri&gt; 
+&lt;/atom:author&gt; 
+&lt;description&gt; 
+&lt;![  
+   CDATA   [  
+      Taxpayers with annual aggregate turnover up to Rs1.5 crore in the previous financial year can avail the option of filing quarterly returns.
+   ]
+]&gt; 
+&lt;/description&gt; 
+&lt;media:keywords&gt;GSTN,
+GST Return,
+Quarterly&lt;/media:keywords&gt; 
+&lt;media:content height="249" url="https://images.assettype.com/swarajya/2017-11/8b4f08c4-c333-4953-b649-330641d1b341/unnamed.jpg" width="448"&gt; 
+&lt;media:title type="html"&gt; 
+&lt;![  
+   CDATA   [  
+      GSTN logo
+   ]
+]&gt; 
+&lt;/media:title&gt; 
+&lt;/media:content&gt; 
+&lt;media:thumbnail url="https://images.assettype.com/swarajya/2017-11/8b4f08c4-c333-4953-b649-330641d1b341/unnamed.jpg?w=280" width="280"/&gt; 
+&lt;category&gt;Insta&lt;/category&gt; 
+&lt;content:encoded&gt; 
+&lt;![  
+   CDATA   [  
+      &lt;p&gt;Goods and services tax network (GSTN),
+      the IT backbone of the new tax regime,
+      on Monday said it has put a new function on its portal to allow taxpayers choose the frequency of filing GSTR 1 form on quarterly or monthly basis.&lt;/p&gt;
+   ]
+]&gt; 
+&lt;/content:encoded&gt; 
+&lt;/item&gt; 
+&lt;/channel&gt; 
+&lt;/rss&gt;
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Displays the RSS feeds of a publisher.</p>
+<h2 id='api-v1-tags-slug'>/api/v1/tags/{slug}</h2><pre class="highlight plaintext"><code>
+Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/tags/temple" -H "Accept: application/json"
+
+Example Response
+
+{  
+   "tags":[  
+      {  
+         "id":407427,
+         "name":"temples",
+         "meta-description":null,
+         "slug":"temples"
+      },
+      {  
+         "id":388924,
+         "name":"#temples",
+         "meta-description":null,
+         "slug":"temples"
+      }
+   ]
+}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Displays the tag ID, name, and the meta description that matches the given slug.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>slug</td>
+<td>string</td>
+<td>The desired tag slug</td>
+</tr>
+</tbody></table>
+<h2 id='api-member-metadata'>/api/member/metadata</h2><pre class="highlight plaintext"><code>
+Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/member/metadata" -H "Accept: application/json"
+
+Example Response
+
+Awaiting inputs.
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Displays the meta description of the current logged-in user.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<p>None.</p>
+<h2 id='api-member-metadata-2'>/api/member/metadata</h2><pre class="highlight plaintext"><code>
+Example Request
+
+$ curl -X POST "http://sketches.quintype.com/api/member/metadata" -H "Accept: application/json" -H "Content-Type: json" -d "{}"
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Enters the meta description of the current logged-in user.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<p>None.</p>
+<h2 id='api-v1-members-me'>/api/v1/members/me</h2><pre class="highlight plaintext"><code>
+Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/members/me" -H "Accept: application/json"
+
+Example Response
+
+{
+  "member": {
+    "updated-at": 1517458769183,
+    "email": "charansingh@twitter-dummy-email.com",
+    "last-name": null,
+    "publisher-id": 1,
+    "name": "Sai Charan",
+    "avatar-url": "http://pbs.twimg.com/profile_images/780788770828267520/5cSBiM5w_normal.jpg",
+    "source": null,
+    "first-name": null,
+    "communication-email": null,
+    "bio": null,
+    "id": 469192,
+    "avatar-s3-key": null,
+    "twitter-handle": null,
+    "created-at": 1517458769183,
+    "metadata": {}
+  }
+}
+
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the details of the current logged-in user.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<p>None.</p>
+<h2 id='api-member-forgot-password'>/api/member/forgot-password</h2><pre class="highlight plaintext"><code>
+Example Request
+
+$ curl -X POST "http://sketches.quintype.com/api/member/forgot-password" -H "Accept: application/json" -H "Content-Type: json" -d "{ \"email\": \"string\"}"
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Updates the password.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>E-mail</td>
+<td>string</td>
+<td>The e-mail ID</td>
+</tr>
+</tbody></table>
+<h2 id='api-member'>/api/member</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X POST "http://sketches.quintype.com/api/member" -H "Accept: application/json" -H "Content-Type: json" -d "{"name":"John Doe","username":"johndoe","email":"john@doe.com","password":"mypassword"}"
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Adds the name, username, password, and the e-mail ID.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Name</td>
+<td>string</td>
+<td>The name of the user</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>string</td>
+<td>The username</td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td>string</td>
+<td>The e-mail ID of the user</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>string</td>
+<td>The password for the mentioned username</td>
+</tr>
+</tbody></table>
+<h2 id='api-member-login'>/api/member/login</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X POST "http://sketches.quintype.com/api/member/forgot-password" -H "Accept: application/json" -H "Content-Type: json" -d {"email":"john@doe.com","password":"mypassword"}
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Logs in with the username and password.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>E-mail</td>
+<td>string</td>
+<td>The registered e-mail ID of the user</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>string</td>
+<td>The password associated with the username</td>
+</tr>
+</tbody></table>
+<h2 id='api-instant-articles-rss'>/api/instant-articles.rss</h2>
+<p><strong>Description</strong></p>
+
+<p>Returns the list of published instant articles.</p>
+
+<p>As a prerequisite to fetch the instant articles, the publisher front-end should contain the <code>&lt;meta property=&quot;fb:pages&quot; content=&quot;1234567890123456&quot; /&gt;</code> tag that is provided by Facebook at the time of registering for instant articles.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<p>None.</p>
+<h2 id='api-v1-amp-story'>/api/v1/amp/story/</h2><pre class="highlight plaintext"><code>Example Request
+
+$ curl -X GET "http://sketches.quintype.com/api/v1/amp/story?slug=international/2018/03/07/test-9" -H "Accept: application/json"
+
+</code></pre>
+<p><strong>Description</strong></p>
+
+<p>Returns the story in AMP format. The output contains information associated with that story.</p>
+
+<p><strong>Input Parameters</strong></p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>slug</td>
+<td>string</td>
+<td>The slug for the desired story</td>
+</tr>
+</tbody></table>
+
+<!--#(H1) this is testing only
+
+* open in new tab
+
+<a href="https://github.com/gja/rack-delete_cookies_from_public_requests" target="_blank">PHP </a>in GitHub
+
+-->
+
+<!--Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+
+We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+
+This example API documentation page was created with [Slate](https://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation. 
+
+# Authentication using name
+
+> To authorize, use this code:
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "api_endpoint_here"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
+> Make sure to replace `meowmeowmeow` with your API key.
+
+Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+
+Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+
+`Authorization: meowmeowmeow`
+
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
+
+# Kittens
+
+## Get All Kittens
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let kittens = api.kittens.get();
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Fluffums",
+    "breed": "calico",
+    "fluffiness": 6,
+    "cuteness": 7
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "breed": "unknown",
+    "fluffiness": 5,
+    "cuteness": 10
+  }
+]
+```
+
+This endpoint retrieves all kittens.
+
+### HTTP Request
+
+`GET http://example.com/api/kittens`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+## Get a Specific Kitten
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let max = api.kittens.get(2);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 2,
+  "name": "Max",
+  "breed": "unknown",
+  "fluffiness": 5,
+  "cuteness": 10
+}
+```
+
+This endpoint retrieves a specific kitten.
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+
+### HTTP Request
+
+`GET http://example.com/kittens/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to retrieve
+
+## Delete a Specific Kitten
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.delete(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.delete(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+  -X DELETE
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let max = api.kittens.delete(2);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 2,
+  "deleted" : ":("
+}
+```
+
+This endpoint retrieves a specific kitten.
+
+### HTTP Request
+
+`DELETE http://example.com/kittens/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to delete-->
+<h1 id='errors'>Errors</h1>
+<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request sucks.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
