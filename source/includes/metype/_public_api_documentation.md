@@ -802,7 +802,7 @@ Key points that needs your attention:
 3. Colours that are returned in the config API are hex strings and by defaults we return default values.
 4. There is no option to choose colors using UI but our backend supports the feature. If you need changes on these please reach out to us at `metype@quintype.com`
 
-## GET all pages of account
+### GET all pages of account
 
 ```shell--request
 curl --location --request GET 'https://www.metype.com/api/v1/accounts/<account_id>/all_pages'
