@@ -697,7 +697,7 @@ curl -X DELETE \
 
 This API is useful to undo a comment reaction.
 
-## Account Config
+## Account
 
 ### GET Account Config
 ```shell--request
@@ -801,6 +801,58 @@ Key points that needs your attention:
 2. When `prevent_profane_comment` is true and `pre_moderate_profane_comment` is true or when only `pre_moderate_profane_comment` is true the comment can be posted and backend will take care of pre-moderation.
 3. Colours that are returned in the config API are hex strings and by defaults we return default values.
 4. There is no option to choose colors using UI but our backend supports the feature. If you need changes on these please reach out to us at `metype@quintype.com`
+
+## GET all pages of account
+
+```shell--request
+curl --location --request GET 'https://www.metype.com/api/v1/accounts/<account_id>/all_pages'
+```
+
+```shell--response
+{
+    "total_count": 12294,
+    "pages": {
+        "data": [
+            {
+                "id": "93349",
+                "type": "page",
+                "attributes": {
+                    "id": 93349,
+                    "url": "<page_url>",
+                    "headline": "<page_headline>",
+                    "hero_image_url": "<hero_image_url>",
+                    "reactions": {},
+                    "comments_count": 51
+                }
+            },
+            {
+                "id": "105638",
+                "type": "page",
+                "attributes": {
+                    "id": 105638,
+                    "url": "<page_url>",
+                    "headline": "<page_headline>",
+                    "hero_image_url": "<hero_image_url>",
+                    "reactions": {},
+                    "comments_count": 12
+                }
+            },
+            ...
+        ]
+    }
+}
+```
+
+This endpoint is used to get all pages of account with filter and sorting. You can use `time_unit` and `time_unit_magnitude` for filtering data. For instance, `time_unit` value is "day" and `time_unit_magnitude` value is "1", it will find pages which are created within last 1 day. if `time_unit` value is "day" and `time_unit_magnitude` value is 5, it will find pages which are created within last 5 days.
+
+|key|type|description|
+|--|--|--|
+| sort_by | String | ordering of particular field, valid values are `created_at` or `comments_count` | default value will be`created_at` |
+| order | String | order of records, valid values are `asc` or `desc` | default value will be `desc` |
+| time_unit | String | valid values are `day`, `week` or `month` | default value will be `day` |
+| time_unit_magnitude | Integer | any positive integer | default value will be `1` |
+| page | Integer | any positive integer, it will be used for pagination, for paticular page number | default value will be `1` |
+| per_page | Integer | any positive integer, for getting number of records for per page | default value will be `10` |
 
 ## Page
 
