@@ -3104,9 +3104,8 @@ https://accesstype.com/api/v1/subscribers/&lt;provider&gt;/&lt;identity&gt;/subs
 <h1 id='for-quintype-platform-customers'>For Quintype Platform Customers</h1>
 <p>The customers of Quintype platform that have login implemented can use below APIs for subscriptions in Accesstype.</p>
 
-<p>All the below APIs are safe to call from the front end JS, where it will read session-cookie to determine the current user. Backend callers can use X-QT-AUTH for the same purpose. 
-All the below APIs accept a <code>key</code> query string param with value as Accesstype Account key. One can get this Account key from <code>Settings &gt; General</code> in Accesstype.</p>
-<h2 id='post-preview-a-subscription-for-logged-in-user'>POST Preview a subscription for logged in user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"content-type: application/json"</span> https://sketches.quintype.com/api/access/v1/members/me/subscriptions/preview?key<span class="o">=</span>&lt;accesstype-account-key&gt; -d <span class="s1">'{
+<p>All the below APIs are safe to call from the front end JS, where it will read session-cookie to determine the current user. Backend callers can use X-QT-AUTH for the same purpose.</p>
+<h2 id='post-preview-a-subscription-for-logged-in-user'>POST Preview a subscription for logged in user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"content-type: application/json"</span> https://sketches.quintype.com/api/access/v1/members/me/subscriptions/preview -d <span class="s1">'{
   "subscription": {
     "subscription_plan_id": "11",
     "coupon_code": "NEWYEAR",
@@ -3192,7 +3191,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 <p>An <code>attempt_token</code> is the identifier of a subscription attempt. It should be sent back with <a href="#post-create-subscription-for-logged-in-user">create-subscription</a> api.</p>
 
 <p>We highly recommend use of this API before accepting payment from a user.</p>
-<h2 id='post-create-subscription-for-logged-in-user'>POST Create Subscription for logged in user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST http://sketches.quintype.com/api/access/v1/members/me/subscriptions?key<span class="o">=</span>&lt;accesstype-account-key&gt; -d <span class="s1">'{
+<h2 id='post-create-subscription-for-logged-in-user'>POST Create Subscription for logged in user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST http://sketches.quintype.com/api/access/v1/members/me/subscriptions -d <span class="s1">'{
   "subscription": {
     "subscription_plan_id": "2118",
     "coupon_code": "UAT",
@@ -3341,7 +3340,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 <p>This API can be used to create a subscription.</p>
 
 <p>Here <code>attempt_token</code> is the token received from <a href="#post-preview-a-subscription-for-logged-in-user">preview</a>.</p>
-<h2 id='list-all-subscriptions-of-a-user'>LIST All subscriptions of a user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> http://sketches.quintype.com/api/access/v1/members/me/subscriptions?key<span class="o">=</span>&lt;accesstype-account-key&gt;
+<h2 id='list-all-subscriptions-of-a-user'>LIST All subscriptions of a user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> http://sketches.quintype.com/api/access/v1/members/me/subscriptions
 
 </code></pre><pre class="highlight shell tab-shell--response"><code><span class="o">{</span>
   <span class="s2">"subscriptions"</span>: <span class="o">[</span>
@@ -3418,7 +3417,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 <span class="o">}</span>
 </code></pre>
 <p>It gives all subscriptions for a user.</p>
-<h2 id='list-all-assets-accessible-to-user'>LIST All Assets accessible to user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> http://sketches.quintype.com/api/access/v1/members/me/assets?key<span class="o">=</span>&lt;accesstype-account-key&gt;
+<h2 id='list-all-assets-accessible-to-user'>LIST All Assets accessible to user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> http://sketches.quintype.com/api/access/v1/members/me/assets
 
 </code></pre><pre class="highlight shell tab-shell--response"><code><span class="o">{</span>
    <span class="s2">"assets"</span>:[
@@ -3432,7 +3431,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 
 </code></pre>
 <p>It gives all assets accessible to a user.</p>
-<h2 id='patch-update-all-subscriptions'>PATCH Update all subscriptions</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X PATCH http://sketches.quintype.com/api/access/v1/members/me/subscriptions?key<span class="o">=</span>&lt;accesstype-account-key&gt; -d <span class="s1">'{
+<h2 id='patch-update-all-subscriptions'>PATCH Update all subscriptions</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X PATCH http://sketches.quintype.com/api/access/v1/members/me/subscriptions -d <span class="s1">'{
   "metadata":  {
     "full-name": "hello-world",
     "email": "hello@quintype.com"
@@ -3441,7 +3440,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 
 </code></pre><pre class="highlight shell tab-shell--response"><code></code></pre>
 <p>It bulk updates <strong>all</strong> subscriptions for user.</p>
-<h2 id='patch-update-a-subscription'>PATCH Update a subscription</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X PATCH http://sketches.quintype.com/api/access/v1/members/me/subscriptions/&lt;id&gt;?key<span class="o">=</span>&lt;accesstype-account-key&gt; -d <span class="s1">'{
+<h2 id='patch-update-a-subscription'>PATCH Update a subscription</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X PATCH http://sketches.quintype.com/api/access/v1/members/me/subscriptions/&lt;id&gt; -d <span class="s1">'{
   "metadata":  {
     "full-name": "hello-world",
     "email": "hello@quintype.com"
@@ -3450,7 +3449,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 
 </code></pre><pre class="highlight shell tab-shell--response"><code></code></pre>
 <p>It updates a subscription for user.</p>
-<h2 id='post-renew-a-subscription-for-logged-in-user'>POST Renew a subscription for logged in user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST http://sketches.quintype.com/api/access/v1/members/me/subscriptions/&lt;id&gt;/renewals?key<span class="o">=</span>&lt;accesstype-account-key&gt; -d <span class="s1">'{
+<h2 id='post-renew-a-subscription-for-logged-in-user'>POST Renew a subscription for logged in user</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST http://sketches.quintype.com/api/access/v1/members/me/subscriptions/&lt;id&gt;/renewals -d <span class="s1">'{
   "coupon_code": "",
   "payment": {
       "payment_type": "razorpay",
@@ -3464,7 +3463,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 <p>This API can be used to renew any renewable subscription.</p>
 
 <p>One can use the optional <code>metadata</code> field to set it different from that of the existing subsription. If not passed, it is set to be same as existing subscription.</p>
-<h2 id='post-create-wallet'>POST Create Wallet</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST http://sketches.quintype.com/api/access/v1/members/me/subscriber-wallets?key<span class="o">=</span>&lt;accesstype-account-key&gt; -d <span class="s1">'{
+<h2 id='post-create-wallet'>POST Create Wallet</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> -X POST http://sketches.quintype.com/api/access/v1/members/me/subscriber-wallets -d <span class="s1">'{
   "subscriber_wallet": {
         "provider": "simpl",
         "metadata": {
@@ -3483,7 +3482,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
   <span class="o">}</span>
 </code></pre>
 <p>This API can be used to add/update wallets for a user.</p>
-<h2 id='get-list-wallets'>GET List Wallets</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> http://sketches.quintype.com/api/access/v1/members/me/subscriber-wallets?key<span class="o">=</span>&lt;accesstype-account-key&gt;
+<h2 id='get-list-wallets'>GET List Wallets</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> http://sketches.quintype.com/api/access/v1/members/me/subscriber-wallets
 
 </code></pre><pre class="highlight shell tab-shell--response"><code><span class="o">{</span>
   <span class="s2">"subscriber_wallets"</span>: <span class="o">[</span><span class="s2">"paytm"</span><span class="o">]</span>
@@ -3491,7 +3490,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 
 </code></pre>
 <p>This API can be used to get wallets for a user.</p>
-<h2 id='delete-wallets'>DELETE Wallets</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> http://sketches.quintype.com/api/access/v1/members/me/subscriber-wallets?key<span class="o">=</span>&lt;accesstype-account-key&gt; -X DELETE
+<h2 id='delete-wallets'>DELETE Wallets</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -H <span class="s2">"Content-Type: application/json"</span> http://sketches.quintype.com/api/access/v1/members/me/subscriber-wallets -X DELETE
 
 </code></pre>
 <p>This API can be used to delete all wallets of a user.</p>
@@ -3545,7 +3544,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 </tr>
 </tbody></table>
 <h2 id='get-access-details-with-metering'>GET Access details with metering</h2><pre class="highlight shell tab-shell--request"><code>
-<span class="gp">$ </span>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -X GET <span class="s1">'https://sketches.quintype.com/api/access/v1/stories/&lt;story-id&gt;/access?key=&lt;accesstype-account-key&gt;'</span>
+<span class="gp">$ </span>curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -X GET <span class="s1">'https://sketches.quintype.com/api/access/v1/stories/&lt;story-id&gt;/access'</span>
 
 </code></pre><pre class="highlight shell tab-shell--response"><code>
 <span class="o">{</span>
@@ -3606,7 +3605,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 
 <p><em>Note</em> An additional query param <code>disable-meter=true</code> needs to be sent for stories behind hard paywall. Such stories will not be metered and access will be granted only to subscribers.</p>
 <h2 id='post-pingback-and-update-meter'>POST Pingback and update meter</h2><pre class="highlight shell tab-shell--request"><code>
-<span class="gp">$ </span>curl -H <span class="s2">"Content-Type: text/plain"</span> -X POST <span class="s1">'https://sketches.quintype.com/api/access/v1/stories/&lt;story-id&gt;/pingback?key=&lt;accesstype-account-key&gt; -d {
+<span class="gp">$ </span>curl -H <span class="s2">"Content-Type: text/plain"</span> -X POST <span class="s1">'https://sketches.quintype.com/api/access/v1/stories/&lt;story-id&gt;/pingback -d {
   "granted": true,
   "grantReason": "METERING",
   "data": {
@@ -3622,7 +3621,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 <p>This API is safe to call from the front end JS, where it will read thin-mint cookie for determining meter identity.</p>
 
 <p>Important: The pingback JSON object is sent with Content-type: text/plain. This is intentional as it removes the need for a CORS preflight check.</p>
-<h2 id='get-invoice-pdf-download'>GET Invoice pdf download</h2><pre class="highlight shell tab-shell--request"><code> curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -X GET <span class="s1">'http://sketches.quintype.com/api/access/v1/members/me/subscriptions/&lt;subscriptionId&gt;/invoices/&lt;invoiceId&gt;/download?key=&lt;accesstype-account-key&gt;'</span>
+<h2 id='get-invoice-pdf-download'>GET Invoice pdf download</h2><pre class="highlight shell tab-shell--request"><code> curl -H <span class="s2">"X-QT-AUTH: &lt;your-auth-token&gt;"</span> -X GET <span class="s1">'http://sketches.quintype.com/api/access/v1/members/me/subscriptions/&lt;subscriptionId&gt;/invoices/&lt;invoiceId&gt;/download'</span>
 </code></pre><pre class="highlight shell tab-shell--response"><code>It returns the invoice file <span class="k">in </span>pdf format.
 </code></pre>
 <p>This API is used by publishers on the Quintype platform, to download the invoice in the pdf format.</p>
@@ -3709,9 +3708,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 For example, if you want to accept pure donations and not manage access of any digital content.</p>
 
 <p>All these APIs are safe to call from the front end JS.</p>
-
-<p>All the below APIs accept a <code>key</code> query string param with value as Accesstype Account key. One can get this Account key from <code>Settings &gt; General</code> in Accesstype.</p>
-<h2 id='post-preview-a-subscription-without-login'>POST Preview a subscription without login</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"content-type: application/json"</span> https://sketches.quintype.com/api/access/v1/subscription-without-login/preview?key<span class="o">=</span>&lt;accesstype-account-key&gt; -d <span class="s1">'{
+<h2 id='post-preview-a-subscription-without-login'>POST Preview a subscription without login</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"content-type: application/json"</span> https://sketches.quintype.com/api/access/v1/subscription-without-login/preview -d <span class="s1">'{
   "subscription": {
     "subscription_plan_id": "11",
     "coupon_code": "NEWYEAR",
@@ -3812,7 +3809,7 @@ For a successful subscription, it also return an <code>attempt_token</code>.</p>
 
 <p>An <code>attempt_token</code> is the identifier of a subscription attempt. It should be sent back along with subscription creation API.
 We highly recommend use of this API before accepting payment form a user.</p>
-<h2 id='post-create-subscription-without-login'>POST Create Subscription without login</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"content-type: application/json"</span> https://sketches.quintype.com/api/access/v1/subscription-without-login?key<span class="o">=</span>&lt;accesstype-account-key&gt; -d <span class="s1">'{
+<h2 id='post-create-subscription-without-login'>POST Create Subscription without login</h2><pre class="highlight shell tab-shell--request"><code>curl -H <span class="s2">"content-type: application/json"</span> https://sketches.quintype.com/api/access/v1/subscription-without-login -d <span class="s1">'{
   "subscription": {
     "subscription_plan_id": "11",
     "coupon_code": "NEWYEAR",
