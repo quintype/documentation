@@ -8,18 +8,24 @@ curl -H "X-SUBAUTH: <auth-token>" -H "Content-Type: application/json" -X POST ht
     "recipient_identity_provider": "email",
     "recipient_identity": "friend@example.com"
   },
-  "plan": {
-    "id": "16564",
-    "price_cents": "0",
-    "price_currency": "INR",
-    "title": "Gold - 3 months"
-  },
-  "coupon_code": "",
-  "payment": {
-    "payment_type": "sponsored",
-    "amount_cents": "0",
-    "amount_currency": "INR"
-  }
+   "subscription": {
+        "notes": "enter your notes",
+        "subscription_type": "standard",
+        "subscription_plan_id": 2118,
+        "coupon_code": "UAT",
+        "payment": {
+            "payment_type": "razorpay",
+            "amount_cents": 14400,
+            "amount_currency": "INR",
+            "payment_token": "pay_BWpQWQcLLK3L37"
+        },
+        "metadata": {
+            "mobile_number": "7639817688"
+        }
+    },
+    "alternate_provider": "email",
+    "alternate_identity": "hey@quintype.com",
+    "attempt_token": "WnwxA2AVrE3xqcDUqrSb3sNm"
 }'
 ```
 ```shell--response
