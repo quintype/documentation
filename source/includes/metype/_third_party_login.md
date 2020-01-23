@@ -15,9 +15,10 @@ Metype lets you any third party authentication system to login users to Metype o
 
 * Most of the languages have libraries to generate [JWT](https://jwt.io/).
 * Expected user payload is as mentioned towards right.
+
 ```
   { 
-    'name': 'batman', //mandatory,
+    'name': 'batman', //mandatory
     'id': 123345, //mandatory
     'email': 'bathman@gotham.com',
     'avatar-url': 'https://gothamcity.com/batman-photo.jpg'
