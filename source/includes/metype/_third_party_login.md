@@ -15,13 +15,17 @@ Metype lets you any third party authentication system to login users to Metype o
 
 * Most of the languages have libraries to generate [JWT](https://jwt.io/).
 * Expected user pay load:
+
+```
   {
     'email': 'bathman@gotham.com',
-    'name': 'batman',
-    'avatar': 'https://gothamcity.com/batman-photo.jpg',
-    'member-id': 123345,
+    'name': 'batman', //mandatory
+    'avatar-url': 'https://gothamcity.com/batman-photo.jpg',
+    'id': 123345, //mandatory
   }
-* `member-id` is the unqiue id to idenity member on your system.
+  ```
+* `id` is the unqiue id used to identify member on your system and is mandatory
+* presence of either one from `name`, `first-name` and `last-name` is mandatory
 * [JWT](https://jwt.io/) generator should be used to generate token using `Shared key` from Metype, `payload` and `SHA-256` as the hashing algorithm.
 
 ## Posting user data to Metype using login callback
