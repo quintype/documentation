@@ -1,5 +1,125 @@
 # Subscription Gifts
 
+## POST Preview a Subscription for gifting
+```shell--request
+curl -H "X-SUBAUTH: <auth-token>" -H "Content-Type: application/json" -X POST https://www.accesstype.com/api/v1/subscribers/<provider>/<identity>/subscriptions/preview.json -d '{
+  "recipient_subscriber": {
+    "recipient_identity_provider": "email",
+    "recipient_identity": "friend@example.com"
+  },
+   "subscription": {
+        "notes": "enter your notes",
+        "subscription_type": "standard",
+        "subscription_plan_id": 2118,
+        "coupon_code": "UAT",
+        "payment": {
+            "payment_type": "razorpay",
+            "amount_cents": 14400,
+            "amount_currency": "INR",
+            "payment_token": "pay_BWpQWQcLLK3L37"
+        },
+        "metadata": {
+            "mobile_number": "7639817688"
+        }
+    },
+    "alternate_provider": "email",
+    "alternate_identity": "hey@quintype.com",
+    "attempt_token": "WnwxA2AVrE3xqcDUqrSb3sNm"
+}'
+```
+
+```shell--response
+{
+    "subscription": {
+        "id": null,
+        "subscriber_id": 2454,
+        "subscription_plan_id": 10,
+        "created_at": null,
+        "updated_at": null,
+        "assets": [],
+        "start_timestamp": "2020-03-18T11:29:12.926Z",
+        "end_timestamp": "2020-03-25T11:29:12.926Z",
+        "deleted_at": null,
+        "payment_id": null,
+        "metadata": {
+            "mobile_number": "7639817688"
+        },
+        "external_id": null,
+        "trial_period_length": null,
+        "trial_period_unit": null,
+        "campaign_id": null,
+        "plan_amount_cents": 1000,
+        "plan_amount_currency": "INR",
+        "duration_unit": "weeks",
+        "duration_length": 1,
+        "plan_name": "plan inr",
+        "plan_description": "plan inr",
+        "group_name": "TEST",
+        "group_description": "test",
+        "subscription_type": "standard",
+        "plan_occurrence": "One Time",
+        "subscription_attempt_id": 2781,
+        "renewal_reminder_sent_date": null,
+        "dynamic_assets": {},
+        "coupon_discount_id": null,
+        "notes": null,
+        "account_id": null,
+        "subscription_group_id": 5,
+        "preferred_identity": {
+            "provider": "email",
+            "value": "friend@example.com"
+        },
+        "active": true,
+        "payment_amount": "10.00",
+        "payment_amount_cents": 1000,
+        "payment_amount_currency": "INR",
+        "payment_type": "paypal",
+        "payment_token": null,
+        "renewable": true,
+        "status": "active",
+        "expired": false,
+        "coupon_code": null,
+        "recurring": false,
+        "cancelled_at": null,
+        "next_payment_due_date": null,
+        "cancelled": false,
+        "in_grace_period": false,
+        "invoices": [],
+        "subscriber_name": null,
+        "discount_detail": {},
+        "referrer": null,
+        "gifter": null,
+        "created_by": null,
+        "subscriber": {
+            "id": 2454,
+            "name": null,
+            "created_at": "2020-03-18T11:29:12.741Z",
+            "updated_at": "2020-03-18T11:29:12.741Z",
+            "metadata": null,
+            "cumulative_end_timestamps": {
+                "standard_subscriptions_cumulative_end_timestamp": null,
+                "campaign_subscriptions_cumulative_end_timestamp": null
+            },
+            "subscriber_identities": [
+                {
+                    "provider": "email",
+                    "value": "friend@example.com"
+                }
+            ]
+        },
+        "expires_in_days": 7,
+        "in_trial_period": false
+    },
+    "attempt_token": "EVcXP57CjzE6t2yumRHQ44gf",
+    "external_reference_id": null,
+    "custom_message": null
+}
+```
+It returns a preview for a Subscription, without creating a new subscription.
+For a successful subscription, it also return an `attempt_token`.
+
+Please ensure that **recipient subscriber should not be same as the gifter**.
+
 ## POST Create a Subscription for gifting
 
 ```shell--request
