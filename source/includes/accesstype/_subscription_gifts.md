@@ -116,9 +116,9 @@ curl -H "X-SUBAUTH: <auth-token>" -H "Content-Type: application/json" -X POST ht
 }
 ```
 It returns a preview for a Subscription, without creating a new subscription.
-For a successful subscription, it also return an `attempt_token`.
+For a successful subscription, it also returns an `attempt_token`.
 
-Please ensure that **recipient subscriber should not be same as the gifter**.
+Please note that **recipient subscriber should not be same as the gifter**.
 
 ## POST Create a Subscription for gifting
 
