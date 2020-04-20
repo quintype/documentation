@@ -20,7 +20,7 @@ $ curl -H "X-SUBAUTH: <your-auth-token>" https://www.accesstype.com/api/v1/campa
 		"preferred_identity_provider": "email",
 		"metadata_fields": [],
 		"currency": "INR",
-		"target_amount": 200000,
+		"target_amount": 2000,
 		"target_amount_validation_enabled": true,
 		"assets": [],
 		"display_assets": [],
