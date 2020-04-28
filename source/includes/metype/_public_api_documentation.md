@@ -851,6 +851,7 @@ This endpoint is used to get all pages of account with filter and sorting. You c
 | order | String | order of records, valid values are `asc` or `desc` | default value will be `desc` |
 | time_unit | String | valid values are `day`, `week` or `month` | default value will be `day` |
 | time_unit_magnitude | Integer | any positive integer | default value will be `1` |
+| domains | Array of string | domain of page url like `https://metype.com` or `https://www.facebook.com` | |
 | page | Integer | any positive integer, it will be used for pagination, for paticular page number | default value will be `1` |
 | per_page | Integer | any positive integer, for getting number of records for per page | default value will be `10` |
 
