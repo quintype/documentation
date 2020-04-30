@@ -845,12 +845,13 @@ curl --location --request GET 'https://www.metype.com/api/v1/accounts/<account_i
 
 This endpoint is used to get all pages of account with filter and sorting. You can use `time_unit` and `time_unit_magnitude` for filtering data. For instance, `time_unit` value is "day" and `time_unit_magnitude` value is "1", it will find pages which are created within last 1 day. if `time_unit` value is "day" and `time_unit_magnitude` value is 5, it will find pages which are created within last 5 days.
 
-|key|type|description|
-|--|--|--|
+|key|type|description||
+|--|--|--|--|
 | sort_by | String | ordering of particular field, valid values are `created_at` or `comments_count` | default value will be`created_at` |
 | order | String | order of records, valid values are `asc` or `desc` | default value will be `desc` |
 | time_unit | String | valid values are `day`, `week` or `month` | default value will be `day` |
 | time_unit_magnitude | Integer | any positive integer | default value will be `1` |
+| domains | Array of string | array of domains of page url, it will be used for filtering the results. Like [`https://metype.com`, `https://www.facebook.com`] | by default all results are retured, irrespecctive of domain of page|
 | page | Integer | any positive integer, it will be used for pagination, for paticular page number | default value will be `1` |
 | per_page | Integer | any positive integer, for getting number of records for per page | default value will be `10` |
 
