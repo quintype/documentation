@@ -16,6 +16,7 @@ includes:
   - accesstype/subscriptions
   - accesstype/subscription_gifts
   - accesstype/campaigns
+  - accesstype/subscription_members
   - accesstype/pay_per_asset
   - accesstype/assets
   - accesstype/wallets
