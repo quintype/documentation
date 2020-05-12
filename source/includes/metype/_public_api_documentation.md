@@ -632,7 +632,8 @@ curl --request GET \
                 "page": {
                     "hero_image_url": null,
                     "headline": null,
-                    "url": "http://example.com/slug"
+                    "url": "http://example.com/slug",
+                    "metadata": {}
                 },
                 "toxicity": 0,
                 "created_at": "2019-12-23T05:18:58.551Z",
@@ -822,6 +823,7 @@ curl --location --request GET 'https://www.metype.com/api/v1/accounts/<account_i
                     "headline": "<page_headline>",
                     "hero_image_url": "<hero_image_url>",
                     "reactions": {},
+                    "metadata": {},
                     "comments_count": 51
                 }
             },
@@ -834,6 +836,7 @@ curl --location --request GET 'https://www.metype.com/api/v1/accounts/<account_i
                     "headline": "<page_headline>",
                     "hero_image_url": "<hero_image_url>",
                     "reactions": {},
+                    "metadata": {},
                     "comments_count": 12
                 }
             },
