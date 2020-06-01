@@ -50,3 +50,8 @@ Please find the script in the shell on the right in the shell.
 
 * Setup the embed code for the UGC widget at the position you need to embed.
 Please find the script with detailed comments on the right in the shell.
+
+* You can pass the extra story attribute in UGC. All you want to set is data attributes `data-metype-topic-type` and `data-metype-topic-value` in the div with `contribution-container` id. You can set this data attributes from front-end with the help of javascript.
+
+  For example, you want to send story attribute named as **"sports"** and it has multiple values **"cricket,virat kohli,dhoni"**.
+  You have to add this values in data attributes like this `data-metype-topic-type="story-attributes.sports"` and `data-metype-topic-value="cricket,virat kohli,dhoni"`.
