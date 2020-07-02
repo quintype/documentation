@@ -23,3 +23,4 @@ _yardoc
 doc/
 .idea/
 /image-name
+node_modules/
