@@ -909,7 +909,11 @@ If you have already done this to integrate other widgets please ignore this step
 Please find the script in the shell on the right in the shell.</p></li>
 <li><p>Setup the embed code for the UGC widget at the position you need to embed.
 Please find the script with detailed comments on the right in the shell.</p></li>
+<li><p>You can also pass the topic as story-attribute in UGC. All you want to set is data attributes <code>data-metype-topic-type</code> and <code>data-metype-topic-value</code> in the div with <code>contribution-container</code> id. You can set this data attributes from front-end with the help of javascript.</p></li>
 </ul>
+
+<p>For example, you want to send story attribute named as <strong>&quot;ugctopic&quot;</strong> and it has multiple values <strong>&quot;cricket,virat kohli,dhoni&quot;</strong>.
+  You have to add this values in data attributes like this <code>data-metype-topic-type=&quot;story-attributes.ugctopic&quot;</code> and <code>data-metype-topic-value=&quot;cricket,virat kohli,dhoni&quot;</code>.</p>
 <h1 id='single-sign-on-sso'>Single Sign On(SSO)</h1>
 <p>Metype enables property owners to manage identity of users by providing a login and sign in service.
 Currently Metype allows social logins like Facebook, Twitter and Google Plus.</p>
@@ -1035,14 +1039,18 @@ The OAuth libraries will handle the rest in the application if you have integrat
 <h2 id='generating-jwt'>Generating JWT</h2>
 <ul>
 <li>Most of the languages have libraries to generate <a href="https://jwt.io/">JWT</a>.</li>
-<li>Expected user pay load:
-{
-&#39;email&#39;: &#39;bathman@gotham.com&#39;,
-&#39;name&#39;: &#39;batman&#39;,
-&#39;avatar&#39;: &#39;https://gothamcity.com/batman-photo.jpg&#39;,
-&#39;member-id&#39;: 123345,
-}</li>
-<li><code>member-id</code> is the unqiue id to idenity member on your system.</li>
+<li>Expected user payload is as mentioned towards right.</li>
+</ul>
+<pre class="highlight plaintext"><code>  { 
+    'name': 'batman', //mandatory
+    'id': 123345, //mandatory
+    'email': 'bathman@gotham.com',
+    'avatar-url': 'https://gothamcity.com/batman-photo.jpg'
+  }
+</code></pre>
+<ul>
+<li><code>id</code> is the unqiue id used to identify user on your system and is mandatory</li>
+<li>presence of either one from <code>name</code>, <code>first-name</code> and <code>last-name</code> is mandatory</li>
 <li><a href="https://jwt.io/">JWT</a> generator should be used to generate token using <code>Shared key</code> from Metype, <code>payload</code> and <code>SHA-256</code> as the hashing algorithm.</li>
 </ul>
 <h2 id='posting-user-data-to-metype-using-login-callback'>Posting user data to Metype using login callback</h2><pre class="highlight javascript tab-javascript"><code>    <span class="nx">talktype</span><span class="p">.</span><span class="nx">accountUserLogin</span><span class="p">({</span>
@@ -2014,7 +2022,8 @@ The OAuth libraries will handle the rest in the application if you have integrat
                 <span class="s2">"page"</span>: <span class="o">{</span>
                     <span class="s2">"hero_image_url"</span>: null,
                     <span class="s2">"headline"</span>: null,
-                    <span class="s2">"url"</span>: <span class="s2">"http://example.com/slug"</span>
+                    <span class="s2">"url"</span>: <span class="s2">"http://example.com/slug"</span>,
+                    <span class="s2">"metadata"</span>: <span class="o">{}</span>
                 <span class="o">}</span>,
                 <span class="s2">"toxicity"</span>: 0,
                 <span class="s2">"created_at"</span>: <span class="s2">"2019-12-23T05:18:58.551Z"</span>,
@@ -2314,6 +2323,7 @@ The OAuth libraries will handle the rest in the application if you have integrat
                     <span class="s2">"headline"</span>: <span class="s2">"&lt;page_headline&gt;"</span>,
                     <span class="s2">"hero_image_url"</span>: <span class="s2">"&lt;hero_image_url&gt;"</span>,
                     <span class="s2">"reactions"</span>: <span class="o">{}</span>,
+                    <span class="s2">"metadata"</span>: <span class="o">{}</span>,
                     <span class="s2">"comments_count"</span>: 51
                 <span class="o">}</span>
             <span class="o">}</span>,
@@ -2326,6 +2336,7 @@ The OAuth libraries will handle the rest in the application if you have integrat
                     <span class="s2">"headline"</span>: <span class="s2">"&lt;page_headline&gt;"</span>,
                     <span class="s2">"hero_image_url"</span>: <span class="s2">"&lt;hero_image_url&gt;"</span>,
                     <span class="s2">"reactions"</span>: <span class="o">{}</span>,
+                    <span class="s2">"metadata"</span>: <span class="o">{}</span>,
                     <span class="s2">"comments_count"</span>: 12
                 <span class="o">}</span>
             <span class="o">}</span>,
@@ -2341,37 +2352,50 @@ The OAuth libraries will handle the rest in the application if you have integrat
 <th>key</th>
 <th>type</th>
 <th>description</th>
+<th></th>
 </tr>
 </thead><tbody>
 <tr>
 <td>sort_by</td>
 <td>String</td>
 <td>ordering of particular field, valid values are <code>created_at</code> or <code>comments_count</code></td>
+<td>default value will be<code>created_at</code></td>
 </tr>
 <tr>
 <td>order</td>
 <td>String</td>
 <td>order of records, valid values are <code>asc</code> or <code>desc</code></td>
+<td>default value will be <code>desc</code></td>
 </tr>
 <tr>
 <td>time_unit</td>
 <td>String</td>
 <td>valid values are <code>day</code>, <code>week</code> or <code>month</code></td>
+<td>default value will be <code>day</code></td>
 </tr>
 <tr>
 <td>time_unit_magnitude</td>
 <td>Integer</td>
 <td>any positive integer</td>
+<td>default value will be <code>1</code></td>
+</tr>
+<tr>
+<td>domains</td>
+<td>Array of string</td>
+<td>array of domains of page url, it will be used for filtering the results. Like [<code>https://metype.com</code>, <code>https://www.facebook.com</code>]</td>
+<td>by default all results are retured, irrespecctive of domain of page</td>
 </tr>
 <tr>
 <td>page</td>
 <td>Integer</td>
 <td>any positive integer, it will be used for pagination, for paticular page number</td>
+<td>default value will be <code>1</code></td>
 </tr>
 <tr>
 <td>per_page</td>
 <td>Integer</td>
 <td>any positive integer, for getting number of records for per page</td>
+<td>default value will be <code>10</code></td>
 </tr>
 </tbody></table>
 <h2 id='page'>Page</h2><h3 id='get-page-data'>GET Page data</h3><pre class="highlight shell tab-shell--request"><code>curl --location --request GET <span class="s1">'https://www.metype.com/api/v1/accounts/&lt;account_id&gt;/pages/&lt;uri_base64_encoded_page_url&gt;'</span>
