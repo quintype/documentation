@@ -55,3 +55,10 @@ Please find the script with detailed comments on the right in the shell.
 
   For example, you want to send story attribute named as **"ugctopic"** and it has multiple values **"cricket,virat kohli,dhoni"**.
   You have to add this values in data attributes like this `data-metype-topic-type="story-attributes.ugctopic"` and `data-metype-topic-value="cricket,virat kohli,dhoni"`.
+
+* When user change the topic from frontend, publisher have to inform about that change in topic. You can use `postMessage` function from window to pass data to iframe. Below is the example given which you have to use,
+
+```
+metypeIframe = document.getElementById("metype-contribution-iframe").contentWindow;
+metypeIframe.postMessage({action: "changed_topic", topic_type: "story-attributes.ugcTopic", topic_value: "ruby,php,python"},"*");
+```
