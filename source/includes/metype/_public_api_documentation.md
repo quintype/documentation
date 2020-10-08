@@ -1280,6 +1280,9 @@ curl -X POST \
             "email": "a@b.com",
             "phone": "929292022",
             "bio": "bio"
+        },
+        topic: {
+            "story-attributes.topic": ["india", "bjp", "modi", "politics"]
         }
     }
 }'
@@ -1307,6 +1310,9 @@ curl -X POST \
             "email": "a@b.com",
             "phone": "929292022",
             "bio": "bio"
+        },
+        "topic": {
+            "story-attributes.topic": ["india", "bjp", "modi", "politics"]
         }
     },
     "message": "Success"
