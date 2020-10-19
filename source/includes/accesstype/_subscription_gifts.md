@@ -237,7 +237,12 @@ curl -H "X-SUBAUTH: <auth-token>" -H "Content-Type: application/json" -X POST ht
         },
         "round_off": "0",
         "external_payment_id": null,
-        "downloadable": false
+        "downloadable": false,
+        "international_payment": true,
+        "payment_gateway_fee_cents": "9999",
+        "payment_gateway_fee_currency": "",
+        "payment_gateway_fee": "1234",
+        "payment_gateway_net_amount": "9999"
       }
     ],
     "subscriber_name": null,

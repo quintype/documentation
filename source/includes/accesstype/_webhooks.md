@@ -132,7 +132,12 @@ Accesstype has the ability to inform third party system by webhook calls that it
         "invoice_taxes": {},
         "round_off": "9999",
         "external_payment_id": null,
-        "downloadable": false
+        "downloadable": false,
+        "international_payment": true,
+        "payment_gateway_fee_cents": "9999",
+        "payment_gateway_fee_currency": "",
+        "payment_gateway_fee": "1234",
+        "payment_gateway_net_amount": "9999"
       }
     ],
     "subscriber_name": "Damon Fritsch",
