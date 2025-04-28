@@ -4,40 +4,158 @@
     <title>Quintype for Developers</title>
     <link href="/stylesheets/homepage.css" rel="stylesheet" />
     <meta charset="utf-8" />
+    <style>
+      .help-icon {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .help-icon svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .help-icon:hover {
+        opacity: 0.8;
+      }
+    </style>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="title" content="Quintype For Developers" />
-    <meta name="description" content="Quintype is a media tech company that focus on building a suite of digital publishing tools to simplify content creation, distribution, audience engagement and monetization." />
+    <meta
+      name="description"
+      content="Quintype is a media tech company that focus on building a suite of digital publishing tools to simplify content creation, distribution, audience engagement and monetization."
+    />
     <meta property="og:title" content="Quintype For Developers" />
     <meta property="og:site_name" content="Quintype for Developers" />
     <meta property="og:url" content="https://developers.quintype.com" />
-    <meta property="og:description" content="Quintype is a media tech company that focus on building a suite of digital publishing tools to simplify content creation, distribution, audience engagement and monetization." />
+    <meta
+      property="og:description"
+      content="Quintype is a media tech company that focus on building a suite of digital publishing tools to simplify content creation, distribution, audience engagement and monetization."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://images.assettype.com/quintype-website/2018-10/013e8cbe-92b4-435f-bbbb-3e101efbc99a/quintype_logo.png" />
+    <meta
+      property="og:image"
+      content="https://images.assettype.com/quintype-website/2018-10/013e8cbe-92b4-435f-bbbb-3e101efbc99a/quintype_logo.png"
+    />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:site" content="@quintype_inc" />
     <meta property="twitter:title" content="Quintype for Developers" />
-    <meta property="twitter:description" content="Quintype is a media tech company that focus on building a suite of digital publishing tools to simplify content creation,distribution, audience engagement and monetization. Get a free demo." />
-    <meta property="twitter:image" content="https://images.assettype.com/quintype-website/2018-10/013e8cbe-92b4-435f-bbbb-3e101efbc99a/quintype_logo.png" />
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"Quintype","legalName":"Quintype Technologies India Pvt Ltd","url":"https://www.quintype.com","logo":"https://www.quintype.com/quintype.png","foundingDate":"2014","address":{"@type":"PostalAddress","streetAddress":"#29, 3rd Floor, Old Airport Road","addressLocality":"Murgesh Palya","addressRegion":"Bangalore","postalCode":"560017","addressCountry":"INDIA"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer support","telephone":"+919019218218","areaServed":"INDIA","email":"sales@quintype.com"}],"sameAs":["https://www.facebook.com/Quintypetechnologies","https://twitter.com/quintype_inc","https://www.linkedin.com/company/quintype/","https://plus.google.com/109975125732886477523"]}</script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66074042-1"></script>
-    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', "UA-66074042-1");</script>
+    <meta
+      property="twitter:description"
+      content="Quintype is a media tech company that focus on building a suite of digital publishing tools to simplify content creation,distribution, audience engagement and monetization. Get a free demo."
+    />
+    <meta
+      property="twitter:image"
+      content="https://images.assettype.com/quintype-website/2018-10/013e8cbe-92b4-435f-bbbb-3e101efbc99a/quintype_logo.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Quintype",
+        "legalName": "Quintype Technologies India Pvt Ltd",
+        "url": "https://www.quintype.com",
+        "logo": "https://www.quintype.com/quintype.png",
+        "foundingDate": "2014",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "#29, 3rd Floor, Old Airport Road",
+          "addressLocality": "Murgesh Palya",
+          "addressRegion": "Bangalore",
+          "postalCode": "560017",
+          "addressCountry": "INDIA"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "telephone": "+919019218218",
+            "areaServed": "INDIA",
+            "email": "sales@quintype.com"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/Quintypetechnologies",
+          "https://twitter.com/quintype_inc",
+          "https://www.linkedin.com/company/quintype/",
+          "https://plus.google.com/109975125732886477523"
+        ]
+      }
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-66074042-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-66074042-1");
+    </script>
   </head>
   <body>
     <header>
       <nav>
         <ul class="header-links">
-          <li class="header-link"><a href="https://www.quintype.com"><img src="https://images.assettype.com/quintype-website/2018-10/013e8cbe-92b4-435f-bbbb-3e101efbc99a/quintype_logo.png" class="qt-logo" alt="Quintype Logo" /></a></li>
-          <li class="header-link desktop-only"><a href="https://developers.quintype.com/malibu/">Malibu</a></li>
-          <li class="header-link desktop-only"><a href="https://help.quintype.com/">Help Documentation</a></li>
-          <li class="header-link"><a href="mailto:support@quintype.com">Support</a></li>
+          <li class="header-link">
+            <a href="https://www.quintype.com"
+              ><img
+                src="https://images.assettype.com/quintype-website/2018-10/013e8cbe-92b4-435f-bbbb-3e101efbc99a/quintype_logo.png"
+                class="qt-logo"
+                alt="Quintype Logo"
+            /></a>
+          </li>
+          <li class="header-link desktop-only">
+            <a href="https://developers.quintype.com/malibu/">Malibu</a>
+          </li>
+          <li class="header-link desktop-only">
+            <a href="https://help.quintype.com/">Help Documentation</a>
+          </li>
+          <li class="header-link">
+            <a href="mailto:support@quintype.com">Support</a>
+          </li>
+          <li class="header-link">
+            <button
+              class="help-icon"
+              onclick="window.plugSDK.toggleSearchAgent()"
+              title="Search Help"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
 
     <div class="large-image">
       <h1 class="headline">Quintype for Developers</h1>
-      <h2 class="subheadline">Quintype helps publishers hit the ground running with a powerful, data-driven, headless CMS.</h2>
+      <h2 class="subheadline">
+        Quintype helps publishers hit the ground running with a powerful,
+        data-driven, headless CMS.
+      </h2>
     </div>
 
     <p class="large-para">Fully featured, to help you get productive, fast!</p>
@@ -45,25 +163,29 @@
       <ul class="cards">
         <li class="card malibu-feature">
           <div>
-            <img class="logo" src="/pwa-logo.jpg" alt="PWA"/>
+            <img class="logo" src="/pwa-logo.jpg" alt="PWA" />
             <h3>PWA, Out of the Box!</h3>
           </div>
         </li>
         <li class="card malibu-feature">
           <div>
-            <img class="logo" src="/seo.png" alt="SEO"/>
+            <img class="logo" src="/seo.png" alt="SEO" />
             <h3>SEO Best Practices</h3>
           </div>
         </li>
         <li class="card malibu-feature">
           <div>
-            <img class="logo" src="/reusable-blocks.png" alt="Reusable Blocks"/>
+            <img
+              class="logo"
+              src="/reusable-blocks.png"
+              alt="Reusable Blocks"
+            />
             <h3>Ready to Integrate Components</h3>
           </div>
         </li>
         <li class="card malibu-feature">
           <div>
-            <img class="logo" src="/integration.png" alt="Integrations"/>
+            <img class="logo" src="/integration.png" alt="Integrations" />
             <h3>Integrates with Everything</h3>
           </div>
         </li>
@@ -98,33 +220,65 @@
         </li>
       </ul>
 
-      <p class="large-para">Not a developer? You might be looking for the <a href="https://help.quintype.com">help documentation</a> instead.</p>
+      <p class="large-para">
+        Not a developer? You might be looking for the
+        <a href="https://help.quintype.com">help documentation</a> instead.
+      </p>
     </div>
     <script
-      src="https://plug-platform.devrev.ai/static/plug.js"                         
-      type="text/javascript">
-    </script>
+      src="https://plug-platform.devrev.ai/static/plug.js"
+      type="text/javascript"
+    ></script>
     <script>
       window.plugSDK.init({
-        app_id: 'don:core:dvrv-us-1:devo/1BnnHeKYll:plug_setting/1',
+        app_id: "don:core:dvrv-us-1:devo/1BnnHeKYll:plug_setting/1",
         disable_plug_chat_window: true,
       });
-                  
+
       window.plugSDK.onEvent((payload) => {
-        if (payload.type === 'ON_PLUG_WIDGET_READY') {
+        if (payload.type === "ON_PLUG_WIDGET_READY") {
           window.plugSDK.initSearchAgent();
         }
       });
     </script>
     <footer>
       <p>Copyright (c) 2014-2019 Quintype</p>
-      <p style="font-size: 0.9rem;font-style: italic;"><a
-          href="https://www.flickr.com/photos/26641068@N05/15325936926">"DSC_0418"</a><span>by <a
-            href="https://www.flickr.com/photos/26641068@N05">jivagoalves</a></span> is licensed under <a
-          href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-SA
-          2.0</a></p>
-      <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
-      <p>Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+      <p style="font-size: 0.9rem; font-style: italic">
+        <a href="https://www.flickr.com/photos/26641068@N05/15325936926"
+          >"DSC_0418"</a
+        ><span
+          >by
+          <a href="https://www.flickr.com/photos/26641068@N05"
+            >jivagoalves</a
+          ></span
+        >
+        is licensed under
+        <a
+          href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=html"
+          style="margin-right: 5px"
+          >CC BY-SA 2.0</a
+        >
+      </p>
+      <p>
+        Icons made by
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+          >Freepik</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+      </p>
+      <p>
+        Icons made by
+        <a href="https://www.flaticon.com/authors/monkik" title="monkik"
+          >monkik</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+      </p>
     </footer>
   </body>
 </html>
