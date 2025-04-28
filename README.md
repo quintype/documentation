@@ -2,7 +2,7 @@
 
 This is the parent folder that controls https://developers.quintype.com.
 
-Do note that various subdirectories are controlled from other repos.
+Do note that various subdirectories are controlled from other repos
 
 * https://developers.quintype.com/malibu - is controlled from the malibu repo, gh-pages branch.
 * https://developers.quintype.com/quintype-node-components - is controlled from the quintype-node-components via jsdoc, and is updated pre-publish
