@@ -100,6 +100,22 @@
 
       <p class="large-para">Not a developer? You might be looking for the <a href="https://help.quintype.com">help documentation</a> instead.</p>
     </div>
+    <script
+      src="https://plug-platform.devrev.ai/static/plug.js"                         
+      type="text/javascript">
+    </script>
+    <script>
+      window.plugSDK.init({
+        app_id: 'don:core:dvrv-us-1:devo/1BnnHeKYll:plug_setting/1',
+        disable_plug_chat_window: true,
+      });
+                  
+      window.plugSDK.onEvent((payload) => {
+        if (payload.type === 'ON_PLUG_WIDGET_READY') {
+          window.plugSDK.initSearchAgent();
+        }
+      });
+    </script>
     <footer>
       <p>Copyright (c) 2014-2019 Quintype</p>
       <p style="font-size: 0.9rem;font-style: italic;"><a
